@@ -1,0 +1,777 @@
+/* ============================================================
+   Verdure Hair Salon — style.css
+   ============================================================ */
+
+/* ── Reset & Base ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --sage:        #8BA888;
+  --sage-light:  #C8D9C6;
+  --sage-pale:   #EEF4ED;
+  --ivory:       #FAF8F5;
+  --charcoal:    #2C2C2A;
+  --warm-gray:   #6B6B67;
+  --border:      rgba(44, 44, 42, 0.12);
+  --gold:        #B5956A;
+  --pink-pale:   #FDF0F3;
+  --pink:        #D4537E;
+  --hpb-red:     #E84A6F;
+  --white:       #FFFFFF;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Jost', sans-serif;
+  background: var(--ivory);
+  color: var(--charcoal);
+  min-height: 100vh;
+}
+
+/* ============================================================
+   Navigation
+   ============================================================ */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 48px;
+  background: var(--ivory);
+  border-bottom: 0.5px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: 300;
+  letter-spacing: 0.12em;
+  color: var(--charcoal);
+  font-style: italic;
+}
+
+.nav-logo span {
+  font-style: normal;
+  font-weight: 600;
+  color: var(--sage);
+}
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+}
+
+.nav-links a {
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--warm-gray);
+  cursor: pointer;
+  text-decoration: none;
+  padding-bottom: 3px;
+  border-bottom: 1px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--charcoal);
+  border-bottom-color: var(--sage);
+}
+
+/* ============================================================
+   Page System
+   ============================================================ */
+.page {
+  display: none;
+  animation: fadeIn 0.35s ease;
+}
+
+.page.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============================================================
+   Sections
+   ============================================================ */
+.section {
+  padding: 64px 48px;
+}
+
+.section-white {
+  background: var(--white);
+}
+
+.section-header {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 32px;
+  font-weight: 300;
+  color: var(--charcoal);
+  white-space: nowrap;
+}
+
+.section-line {
+  flex: 1;
+  height: 0.5px;
+  background: var(--border);
+  max-width: 240px;
+}
+
+.section-more {
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--sage);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: opacity 0.2s;
+}
+
+.section-more:hover {
+  opacity: 0.7;
+}
+
+/* ============================================================
+   Buttons
+   ============================================================ */
+.btn-primary {
+  display: inline-block;
+  background: var(--charcoal);
+  color: var(--ivory);
+  padding: 13px 32px;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+  font-family: 'Jost', sans-serif;
+  font-weight: 400;
+  transition: background 0.2s;
+}
+
+.btn-primary:hover {
+  background: var(--sage);
+}
+
+.btn-outline {
+  display: inline-block;
+  background: transparent;
+  color: var(--charcoal);
+  padding: 12px 32px;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: 1px solid var(--charcoal);
+  font-family: 'Jost', sans-serif;
+  font-weight: 400;
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn-outline:hover {
+  background: var(--charcoal);
+  color: var(--ivory);
+}
+
+/* ============================================================
+   Hero
+   ============================================================ */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 440px;
+}
+
+.hero-text {
+  padding: 64px 56px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 22px;
+}
+
+.hero-eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--sage);
+}
+
+.hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 50px;
+  font-weight: 300;
+  line-height: 1.18;
+  color: var(--charcoal);
+}
+
+.hero-title em {
+  font-style: italic;
+  color: var(--sage);
+}
+
+.hero-subtitle {
+  font-size: 14px;
+  color: var(--warm-gray);
+  line-height: 1.9;
+  max-width: 340px;
+}
+
+.hero-btns {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.hero-visual {
+  background: var(--sage-pale);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 360px;
+}
+
+.hero-decoration {
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: var(--sage-light);
+  opacity: 0.5;
+  top: -48px;
+  right: -48px;
+}
+
+.hero-scissors {
+  font-size: 88px;
+  color: var(--sage);
+  z-index: 1;
+}
+
+.hero-tag {
+  position: absolute;
+  bottom: 36px;
+  left: 36px;
+  background: var(--white);
+  padding: 14px 20px;
+  border-left: 3px solid var(--sage);
+}
+
+.hero-tag-label {
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--warm-gray);
+}
+
+.hero-tag-value {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: 300;
+  margin-top: 3px;
+  color: var(--charcoal);
+}
+
+/* ============================================================
+   Features Grid (Home)
+   ============================================================ */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  background: var(--border);
+  border: 0.5px solid var(--border);
+}
+
+.feature-card {
+  background: var(--white);
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.feature-icon {
+  width: 40px;
+  height: 40px;
+  background: var(--sage-pale);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--sage);
+  font-size: 20px;
+}
+
+.feature-title {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--charcoal);
+}
+
+.feature-text {
+  font-size: 13px;
+  color: var(--warm-gray);
+  line-height: 1.8;
+}
+
+/* ============================================================
+   Popular Menu (Home)
+   ============================================================ */
+.popular-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.popular-card {
+  padding: 28px;
+  border: 0.5px solid var(--border);
+  background: var(--white);
+}
+
+.popular-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 8px;
+  color: var(--charcoal);
+}
+
+.popular-desc {
+  font-size: 12px;
+  color: var(--warm-gray);
+  margin-bottom: 16px;
+  line-height: 1.7;
+}
+
+.popular-price {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--gold);
+}
+
+/* ============================================================
+   Menu Page
+   ============================================================ */
+.menu-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.menu-category {
+  border: 0.5px solid var(--border);
+  padding: 32px;
+  background: var(--white);
+}
+
+.menu-cat-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 4px;
+  color: var(--charcoal);
+}
+
+.menu-cat-sub {
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--sage);
+  margin-bottom: 24px;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 12px 0;
+  border-bottom: 0.5px dotted var(--border);
+  gap: 12px;
+}
+
+.menu-item:last-child {
+  border-bottom: none;
+}
+
+.menu-item-name {
+  font-size: 14px;
+  color: var(--charcoal);
+}
+
+.menu-item-desc {
+  font-size: 12px;
+  color: var(--warm-gray);
+  margin-top: 3px;
+}
+
+.menu-item-price {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--gold);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.menu-note {
+  margin-top: 24px;
+  padding: 16px 20px;
+  background: var(--sage-pale);
+  border-left: 3px solid var(--sage);
+  font-size: 13px;
+  color: var(--warm-gray);
+  line-height: 1.8;
+}
+
+/* ============================================================
+   Stylists Page
+   ============================================================ */
+.stylists-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.stylist-card {
+  border: 0.5px solid var(--border);
+  overflow: hidden;
+  background: var(--white);
+  transition: transform 0.25s;
+}
+
+.stylist-card:hover {
+  transform: translateY(-4px);
+}
+
+.stylist-avatar {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 72px;
+}
+
+.stylist-avatar--sage {
+  background: var(--sage-pale);
+  color: var(--sage);
+}
+
+.stylist-avatar--pink {
+  background: var(--pink-pale);
+  color: var(--pink);
+}
+
+.stylist-avatar--mint {
+  background: #EEF4ED;
+  color: var(--sage);
+}
+
+.stylist-info {
+  padding: 24px;
+}
+
+.stylist-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--charcoal);
+}
+
+.stylist-role {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--sage);
+  margin: 6px 0 12px;
+}
+
+.stylist-bio {
+  font-size: 13px;
+  color: var(--warm-gray);
+  line-height: 1.8;
+}
+
+.stylist-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 14px;
+}
+
+.stylist-tag {
+  font-size: 11px;
+  background: var(--sage-pale);
+  color: var(--sage);
+  padding: 4px 12px;
+  letter-spacing: 0.06em;
+}
+
+/* ============================================================
+   Booking Page
+   ============================================================ */
+.booking-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.hpb-card {
+  border: 1px solid var(--sage-light);
+  background: var(--sage-pale);
+  padding: 40px 36px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  text-align: center;
+}
+
+.hpb-logo {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  color: var(--hpb-red);
+  background: var(--white);
+  padding: 8px 20px;
+  border: 1px solid rgba(232, 74, 111, 0.3);
+}
+
+.hpb-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 26px;
+  font-weight: 300;
+  color: var(--charcoal);
+  line-height: 1.4;
+}
+
+.hpb-desc {
+  font-size: 13px;
+  color: var(--warm-gray);
+  line-height: 1.8;
+}
+
+.hpb-btn {
+  display: block;
+  width: 100%;
+  background: var(--hpb-red);
+  color: var(--white);
+  padding: 14px 28px;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  font-family: 'Jost', sans-serif;
+  text-decoration: none;
+  text-align: center;
+  transition: opacity 0.2s;
+}
+
+.hpb-btn:hover {
+  opacity: 0.85;
+}
+
+.hpb-note {
+  font-size: 11px;
+  color: var(--warm-gray);
+  letter-spacing: 0.06em;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.contact-heading {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--charcoal);
+  margin-bottom: 20px;
+}
+
+.contact-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  padding: 20px;
+  border: 0.5px solid var(--border);
+  background: var(--white);
+  margin-bottom: 8px;
+}
+
+.contact-icon {
+  width: 42px;
+  height: 42px;
+  background: var(--sage-pale);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--sage);
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.contact-label {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--warm-gray);
+}
+
+.contact-value {
+  font-size: 14px;
+  color: var(--charcoal);
+  margin-top: 4px;
+  line-height: 1.7;
+}
+
+.contact-value--large {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: 300;
+}
+
+.contact-value--sub {
+  font-size: 12px;
+  color: var(--sage);
+}
+
+/* ============================================================
+   Footer
+   ============================================================ */
+footer {
+  background: var(--charcoal);
+  color: rgba(255, 255, 255, 0.55);
+  padding: 36px 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+}
+
+.footer-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  font-weight: 300;
+  color: var(--white);
+  font-style: italic;
+}
+
+/* ============================================================
+   Responsive — Tablet (max 900px)
+   ============================================================ */
+@media (max-width: 900px) {
+  nav {
+    padding: 16px 24px;
+  }
+
+  .nav-links {
+    gap: 20px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-visual {
+    min-height: 220px;
+  }
+
+  .hero-text {
+    padding: 48px 32px;
+  }
+
+  .hero-title {
+    font-size: 38px;
+  }
+
+  .section {
+    padding: 48px 24px;
+  }
+
+  .features-grid,
+  .popular-grid,
+  .stylists-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .booking-layout {
+    grid-template-columns: 1fr;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    padding: 28px 24px;
+  }
+}
+
+/* ============================================================
+   Responsive — Mobile (max 600px)
+   ============================================================ */
+@media (max-width: 600px) {
+  .nav-logo {
+    font-size: 18px;
+  }
+
+  .nav-links a {
+    font-size: 11px;
+    letter-spacing: 0.06em;
+  }
+
+  .nav-links {
+    gap: 12px;
+  }
+
+  .hero-title {
+    font-size: 32px;
+  }
+
+  .section-title {
+    font-size: 26px;
+  }
+
+  .hero-btns {
+    flex-direction: column;
+  }
+}

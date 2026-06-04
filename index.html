@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verdure Hair Salon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <nav>
+    <div class="nav-logo"><span>Verdure</span> Hair Salon</div>
+    <ul class="nav-links">
+      <li><a href="#" onclick="showPage('home'); return false;" class="active" id="nav-home">Home</a></li>
+      <li><a href="#" onclick="showPage('menu'); return false;" id="nav-menu">Menu</a></li>
+      <li><a href="#" onclick="showPage('stylists'); return false;" id="nav-stylists">Stylist</a></li>
+      <li><a href="#" onclick="showPage('booking'); return false;" id="nav-booking">Booking</a></li>
+    </ul>
+  </nav>
+
+  <!-- ── HOME ── -->
+  <div class="page active" id="page-home">
+    <div class="hero">
+      <div class="hero-text">
+        <p class="hero-eyebrow">Hair Salon · Tokyo</p>
+        <h1 class="hero-title">あなたらしい<br><em>美しさ</em>を<br>引き出す場所</h1>
+        <p class="hero-subtitle">植物のように自然に、丁寧に。<br>あなたの個性を活かしたヘアスタイルをご提案します。</p>
+        <div class="hero-btns">
+          <button class="btn-primary" onclick="showPage('booking')">予約する</button>
+          <button class="btn-outline" onclick="showPage('menu')">メニューを見る</button>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-decoration"></div>
+        <i class="ti ti-scissors hero-scissors" aria-hidden="true"></i>
+        <div class="hero-tag">
+          <div class="hero-tag-label">Open Hours</div>
+          <div class="hero-tag-value">10:00 — 20:00</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section section-white">
+      <div class="section-header">
+        <h2 class="section-title">Verdure について</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon"><i class="ti ti-plant-2" aria-hidden="true"></i></div>
+          <div class="feature-title">オーガニックケア</div>
+          <div class="feature-text">厳選した植物由来の薬剤を使用。髪と頭皮への負担を最小限に抑えます。</div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="ti ti-user-check" aria-hidden="true"></i></div>
+          <div class="feature-title">経験豊富なスタイリスト</div>
+          <div class="feature-text">一人ひとりの骨格・髪質・ライフスタイルに合わせた提案をお届けします。</div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="ti ti-sparkles" aria-hidden="true"></i></div>
+          <div class="feature-title">完全個室ブース</div>
+          <div class="feature-text">周りを気にせずゆったりとお過ごしいただける、プライベート空間をご用意。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header">
+        <h2 class="section-title">人気メニュー</h2>
+        <div class="section-line"></div>
+        <a href="#" onclick="showPage('menu'); return false;" class="section-more">すべて見る →</a>
+      </div>
+      <div class="popular-grid">
+        <div class="popular-card">
+          <div class="popular-name">カット</div>
+          <div class="popular-desc">カウンセリング + シャンプー込み</div>
+          <div class="popular-price">¥6,600〜</div>
+        </div>
+        <div class="popular-card">
+          <div class="popular-name">カラー</div>
+          <div class="popular-desc">リタッチ・フルカラー各種</div>
+          <div class="popular-price">¥8,800〜</div>
+        </div>
+        <div class="popular-card">
+          <div class="popular-name">トリートメント</div>
+          <div class="popular-desc">髪質改善・集中ケア</div>
+          <div class="popular-price">¥4,400〜</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── MENU ── -->
+  <div class="page" id="page-menu">
+    <div class="section">
+      <div class="section-header">
+        <h2 class="section-title">メニュー</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="menu-grid">
+        <div class="menu-category">
+          <div class="menu-cat-title">カット</div>
+          <div class="menu-cat-sub">Cut</div>
+          <div class="menu-item">
+            <div><div class="menu-item-name">レディースカット</div><div class="menu-item-desc">シャンプー・ブロー込み</div></div>
+            <div class="menu-item-price">¥6,600</div>
+          </div>
+          <div class="menu-item">
+            <div><div class="menu-item-name">メンズカット</div><div class="menu-item-desc">シャンプー込み</div></div>
+            <div class="menu-item-price">¥5,500</div>
+          </div>
+          <div class="menu-item">
+            <div><div class="menu-item-name">前髪カット</div><div class="menu-item-desc">前髪のみ</div></div>
+            <div class="menu-item-price">¥1,100</div>
+          </div>
+        </div>
+        <div class="menu-category">
+          <div class="menu-cat-title">カラー</div>
+          <div class="menu-cat-sub">Color</div>
+          <div class="menu-item">
+            <div><div class="menu-item-name">リタッチカラー</div><div class="menu-item-desc">根元のみ</div></div>
+            <div class="menu-item-price">¥8,800</div>
+          </div>
+          <div class="menu-item">
+            <div><div class="menu-item-name">フルカラー</div><div class="menu-item-desc">全体染め</div></div>
+            <div class="menu-item-price">¥12,100</div>
+          </div>
+          <div class="menu-item">
+            <div><div class="menu-item-name">イルミナカラー</div><div class="menu-item-desc">外国人風透明感カラー</div></div>
+            <div class="menu-item-price">¥14,300</div>
+          </div>
+          <div class="menu-item">
+            <div><div class="menu-item-name">インナーカラー</div><div class="menu-item-desc">部分ポイントカラー</div></div>
+            <div class="menu-item-price">¥9,900〜</div>
+          </div>
+        </div>
+        <div class="menu-category">
+          <div class="menu-cat-title">パーマ</div>
+          <div class="menu-cat-sub">Perm</div>
+          <div class="menu-item">
+            <div><div class="menu-item-name">デジタルパーマ</div><div class="menu-item-desc">持ちの良い温感パーマ</div></div>
+            <div class="menu-item-price">¥17,600〜</div>
+          </div>
+          <div class="menu-item">
+            <div><div class="menu-item-name">コールドパーマ</div><div class="menu-item-desc">やわらかナチュラルウェーブ</div></div>
+            <div class="menu-item-price">¥13,200〜</div>
+          </div>
+          <div class="menu-item">
+            <div><div class="menu-item-name">縮毛矯正</div><div class="menu-item-desc">くせ毛・うねりを改善</div></div>
+            <div class="menu-item-price">¥19,800〜</div>
+          </div>
+        </div>
+        <div class="menu-category">
+          <div class="menu-cat-title">トリートメント</div>
+          <div class="menu-cat-sub">Treatment</div>
+          <div class="menu-item">
+            <div><div class="menu-item-name">ミルボントリートメント</div><div class="menu-item-desc">集中補修・ツヤ出し</div></div>
+            <div class="menu-item-price">¥4,400〜</div>
+          </div>
+          <div class="menu-item">
+            <div><div class="menu-item-name">髪質改善トリートメント</div><div class="menu-item-desc">酸熱系サロン専売品使用</div></div>
+            <div class="menu-item-price">¥11,000〜</div>
+          </div>
+          <div class="menu-item">
+            <div><div class="menu-item-name">ヘッドスパ</div><div class="menu-item-desc">頭皮ケア・リラクゼーション</div></div>
+            <div class="menu-item-price">¥5,500〜</div>
+          </div>
+        </div>
+      </div>
+      <div class="menu-note">
+        ※ 表示価格はすべて税込です。髪の長さ・量により料金が変わる場合がございます。カウンセリング時にご確認ください。
+      </div>
+    </div>
+  </div>
+
+  <!-- ── STYLISTS ── -->
+  <div class="page" id="page-stylists">
+    <div class="section">
+      <div class="section-header">
+        <h2 class="section-title">スタイリスト紹介</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="stylists-grid">
+        <div class="stylist-card">
+          <div class="stylist-avatar stylist-avatar--sage">
+            <i class="ti ti-user-circle" aria-hidden="true"></i>
+          </div>
+          <div class="stylist-info">
+            <div class="stylist-name">田中 美咲</div>
+            <div class="stylist-role">Top Stylist · 10年</div>
+            <div class="stylist-bio">ナチュラルなグラデーションカラーが得意。お客様一人ひとりに合ったスタイルを丁寧にご提案します。</div>
+            <div class="stylist-tags">
+              <span class="stylist-tag">カラー</span>
+              <span class="stylist-tag">イルミナ</span>
+              <span class="stylist-tag">ショートヘア</span>
+            </div>
+          </div>
+        </div>
+        <div class="stylist-card">
+          <div class="stylist-avatar stylist-avatar--pink">
+            <i class="ti ti-user-circle" aria-hidden="true"></i>
+          </div>
+          <div class="stylist-info">
+            <div class="stylist-name">山本 健一</div>
+            <div class="stylist-role">Senior Stylist · 7年</div>
+            <div class="stylist-bio">メンズカットとパーマを中心に活躍。骨格に合わせたスタイリングで男性のビジネスシーンをサポート。</div>
+            <div class="stylist-tags">
+              <span class="stylist-tag">メンズカット</span>
+              <span class="stylist-tag">パーマ</span>
+              <span class="stylist-tag">バーバー風</span>
+            </div>
+          </div>
+        </div>
+        <div class="stylist-card">
+          <div class="stylist-avatar stylist-avatar--mint">
+            <i class="ti ti-user-circle" aria-hidden="true"></i>
+          </div>
+          <div class="stylist-info">
+            <div class="stylist-name">佐藤 あおい</div>
+            <div class="stylist-role">Stylist · 4年</div>
+            <div class="stylist-bio">ヘッドスパと髪質改善を専門に学んできた実力派。くせ毛・ダメージ毛でお悩みの方はぜひご相談ください。</div>
+            <div class="stylist-tags">
+              <span class="stylist-tag">髪質改善</span>
+              <span class="stylist-tag">縮毛矯正</span>
+              <span class="stylist-tag">ヘッドスパ</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── BOOKING ── -->
+  <div class="page" id="page-booking">
+    <div class="section">
+      <div class="section-header">
+        <h2 class="section-title">ご予約</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="booking-layout">
+        <div class="hpb-card">
+          <div class="hpb-logo">Hot Pepper Beauty</div>
+          <div class="hpb-title">オンライン予約は<br>ホットペッパービューティーから</div>
+          <div class="hpb-desc">24時間いつでもご予約いただけます。クーポンも豊富にご用意しています。初回来店の方もお気軽にどうぞ。</div>
+          <!-- ★ href を実際のホットペッパービューティーのURLに変更してください -->
+          <a class="hpb-btn" href="https://beauty.hotpepper.jp/" target="_blank" rel="noopener">
+            <i class="ti ti-calendar-event" aria-hidden="true"></i> ホットペッパーで予約する
+          </a>
+          <div class="hpb-note">24時間受付 · クーポンあり · 口コミ掲載中</div>
+        </div>
+        <div class="contact-info">
+          <h3 class="contact-heading">お電話でもご予約いただけます</h3>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="ti ti-phone" aria-hidden="true"></i></div>
+            <div>
+              <div class="contact-label">電話番号</div>
+              <!-- ★ 電話番号を変更してください -->
+              <div class="contact-value contact-value--large">03-XXXX-XXXX</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="ti ti-clock" aria-hidden="true"></i></div>
+            <div>
+              <div class="contact-label">営業時間</div>
+              <div class="contact-value">火〜金：10:00 — 20:00<br>土・日・祝：9:00 — 19:00<br>定休日：月曜日</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="ti ti-map-pin" aria-hidden="true"></i></div>
+            <div>
+              <div class="contact-label">アクセス</div>
+              <!-- ★ 住所を変更してください -->
+              <div class="contact-value">東京都○○区○○町 1-2-3<br>○○駅 徒歩3分</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="ti ti-brand-instagram" aria-hidden="true"></i></div>
+            <div>
+              <div class="contact-label">SNS</div>
+              <!-- ★ Instagramアカウント名を変更してください -->
+              <div class="contact-value">@verdure_hair<br><span class="contact-value--sub">最新スタイルをInstagramで公開中</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-logo">Verdure Hair Salon</div>
+    <div>© 2025 Verdure. All rights reserved.</div>
+    <!-- ★ 住所を変更してください -->
+    <div>東京都○○区○○町 1-2-3</div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
