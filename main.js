@@ -1,44 +1,50 @@
 /**
  * Verdure Hair Salon — main.js
- * ページ切り替え処理
  */
-
 'use strict';
 
-/**
- * 指定したページIDのページを表示し、ナビゲーションをアクティブにする
- * @param {string} id - ページID ('home' | 'menu' | 'stylists' | 'booking')
- */
 function showPage(id) {
-  // すべてのページを非表示
-  var pages = document.querySelectorAll('.page');
-  pages.forEach(function (page) {
-    page.classList.remove('active');
+  document.querySelectorAll('.page').forEach(function(p) {
+    p.classList.remove('active');
+  });
+  document.querySelectorAll('.nav-links a').forEach(function(a) {
+    a.classList.remove('active');
   });
 
-  // すべてのナビリンクを非アクティブ
-  var navLinks = document.querySelectorAll('.nav-links a');
-  navLinks.forEach(function (link) {
-    link.classList.remove('active');
-  });
-
-  // 指定ページを表示
   var targetPage = document.getElementById('page-' + id);
-  if (targetPage) {
-    targetPage.classList.add('active');
-  }
+  if (targetPage) targetPage.classList.add('active');
 
-  // 対応するナビリンクをアクティブ
   var targetNav = document.getElementById('nav-' + id);
-  if (targetNav) {
-    targetNav.classList.add('active');
-  }
+  if (targetNav) targetNav.classList.add('active');
 
-  // ページトップへスクロール
+  // ハンバーガーメニューを閉じる
+  closeMenu();
+
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-// ページ読み込み時にホームを表示
-document.addEventListener('DOMContentLoaded', function () {
+function closeMenu() {
+  var hamburger = document.getElementById('nav-hamburger');
+  var navList   = document.getElementById('nav-links-list');
+  if (hamburger) hamburger.classList.remove('open');
+  if (navList)   navList.classList.remove('open');
+}
+
+document.addEventListener('DOMContentLoaded', function() {
   showPage('home');
+
+  // ハンバーガーボタンのトグル
+  var hamburger = document.getElementById('nav-hamburger');
+  var navList   = document.getElementById('nav-links-list');
+  if (hamburger && navList) {
+    hamburger.addEventListener('click', function() {
+      hamburger.classList.toggle('open');
+      navList.classList.toggle('open');
+    });
+  }
+
+  // メニュー外タップで閉じる
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('nav')) closeMenu();
+  });
 });

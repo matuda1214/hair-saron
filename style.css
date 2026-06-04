@@ -693,15 +693,84 @@ footer {
 }
 
 /* ============================================================
+   Hamburger Button (hidden on desktop)
+   ============================================================ */
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 36px;
+  height: 36px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  flex-shrink: 0;
+}
+
+.nav-hamburger span {
+  display: block;
+  width: 22px;
+  height: 1.5px;
+  background: var(--charcoal);
+  transition: transform 0.25s, opacity 0.25s;
+}
+
+.nav-hamburger.open span:nth-child(1) {
+  transform: translateY(6.5px) rotate(45deg);
+}
+
+.nav-hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-hamburger.open span:nth-child(3) {
+  transform: translateY(-6.5px) rotate(-45deg);
+}
+
+/* ============================================================
    Responsive — Tablet (max 900px)
    ============================================================ */
 @media (max-width: 900px) {
   nav {
     padding: 16px 24px;
+    flex-wrap: wrap;
+  }
+
+  .nav-hamburger {
+    display: flex;
   }
 
   .nav-links {
-    gap: 20px;
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+    padding: 8px 0 16px;
+    border-top: 0.5px solid var(--border);
+    margin-top: 12px;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 12px 4px;
+    font-size: 14px;
+    border-bottom: 0.5px solid var(--border);
+  }
+
+  .nav-links a.active,
+  .nav-links a:hover {
+    color: var(--sage);
+    border-bottom-color: var(--border);
   }
 
   .hero {
@@ -709,69 +778,63 @@ footer {
   }
 
   .hero-visual {
-    min-height: 220px;
+    min-height: 200px;
+    order: -1;
   }
 
-  .hero-text {
-    padding: 48px 32px;
-  }
+  .hero-decoration { width: 160px; height: 160px; }
+  .hero-scissors { font-size: 64px; }
+  .hero-tag { bottom: 20px; left: 20px; }
+  .hero-text { padding: 40px 28px; }
+  .hero-title { font-size: 36px; }
 
-  .hero-title {
-    font-size: 38px;
-  }
+  .section { padding: 44px 20px; }
+  .section-header { flex-wrap: wrap; gap: 10px; }
+  .section-line { display: none; }
 
-  .section {
-    padding: 48px 24px;
-  }
-
-  .features-grid,
-  .popular-grid,
-  .stylists-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .menu-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .booking-layout {
-    grid-template-columns: 1fr;
-  }
+  .features-grid { grid-template-columns: 1fr; gap: 2px; }
+  .popular-grid { grid-template-columns: 1fr; gap: 12px; }
+  .stylists-grid { grid-template-columns: 1fr; gap: 16px; }
+  .menu-grid { grid-template-columns: 1fr; gap: 16px; }
+  .booking-layout { grid-template-columns: 1fr; gap: 24px; }
 
   footer {
     flex-direction: column;
     gap: 10px;
     text-align: center;
-    padding: 28px 24px;
+    padding: 28px 20px;
   }
 }
 
 /* ============================================================
-   Responsive — Mobile (max 600px)
+   Responsive — Mobile (max 480px)
    ============================================================ */
-@media (max-width: 600px) {
-  .nav-logo {
-    font-size: 18px;
+@media (max-width: 480px) {
+  nav { padding: 14px 16px; }
+  .nav-logo { font-size: 17px; }
+
+  .hero-text { padding: 32px 16px; }
+  .hero-title { font-size: 30px; }
+  .hero-subtitle { font-size: 13px; }
+
+  .hero-btns { flex-direction: column; gap: 10px; }
+  .btn-primary, .btn-outline {
+    width: 100%;
+    text-align: center;
+    padding: 14px 20px;
   }
 
-  .nav-links a {
-    font-size: 11px;
-    letter-spacing: 0.06em;
-  }
+  .section { padding: 36px 16px; }
+  .section-title { font-size: 26px; }
 
-  .nav-links {
-    gap: 12px;
-  }
+  .feature-card { padding: 24px 20px; }
+  .popular-card { padding: 20px; }
+  .menu-category { padding: 24px 16px; }
+  .stylist-avatar { height: 160px; font-size: 56px; }
+  .hpb-card { padding: 28px 20px; }
+  .hpb-title { font-size: 22px; }
+  .contact-item { padding: 14px 12px; }
 
-  .hero-title {
-    font-size: 32px;
-  }
-
-  .section-title {
-    font-size: 26px;
-  }
-
-  .hero-btns {
-    flex-direction: column;
-  }
+  footer { padding: 24px 16px; font-size: 11px; }
 }
+
