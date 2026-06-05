@@ -3,303 +3,586 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Verdure Hair Salon</title>
+  <title>Verdure Hair Salon｜地域に根ざした家族みんなのヘアサロン</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <nav>
-    <div class="nav-logo"><span>Verdure</span> Hair Salon</div>
-    <button class="nav-hamburger" id="nav-hamburger" aria-label="メニューを開く">
-      <span></span><span></span><span></span>
-    </button>
-    <ul class="nav-links" id="nav-links-list">
-      <li><a href="#" onclick="showPage('home'); return false;" class="active" id="nav-home">Home</a></li>
-      <li><a href="#" onclick="showPage('menu'); return false;" id="nav-menu">Menu</a></li>
-      <li><a href="#" onclick="showPage('stylists'); return false;" id="nav-stylists">Stylist</a></li>
-      <li><a href="#" onclick="showPage('booking'); return false;" id="nav-booking">Booking</a></li>
-    </ul>
-  </nav>
+<nav id="main-nav">
+  <div class="nav-logo">
+    <div class="nav-logo-main"><span>Verdure</span> Hair Salon</div>
+    <div class="nav-logo-sub">地域に根ざした家族のヘアサロン</div>
+  </div>
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="メニュー">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="nav-links-list">
+    <li><a href="#" onclick="showPage('home');return false;" class="active" id="nav-home">ホーム</a></li>
+    <li><a href="#" onclick="showPage('menu');return false;" id="nav-menu">メニュー・料金</a></li>
+    <li><a href="#" onclick="showPage('stylists');return false;" id="nav-stylists">スタイリスト</a></li>
+    <li><a href="#" onclick="showPage('booking');return false;" id="nav-booking">ご予約</a></li>
+  </ul>
+</nav>
 
-  <!-- ── HOME ── -->
-  <div class="page active" id="page-home">
-    <div class="hero">
-      <div class="hero-text">
-        <p class="hero-eyebrow">Hair Salon · Tokyo</p>
-        <h1 class="hero-title">あなたらしい<br><em>美しさ</em>を<br>引き出す場所</h1>
-        <p class="hero-subtitle">植物のように自然に、丁寧に。<br>あなたの個性を活かしたヘアスタイルをご提案します。</p>
-        <div class="hero-btns">
-          <button class="btn-primary" onclick="showPage('booking')">予約する</button>
-          <button class="btn-outline" onclick="showPage('menu')">メニューを見る</button>
+<!-- ══ HOME ══ -->
+<div class="page active" id="page-home">
+
+  <!-- ヒーロースライドショー -->
+  <section class="hero">
+    <div class="hero-slides">
+
+      <!-- スライド1 -->
+      <div class="hero-slide active">
+        <div class="hero-slide-bg">
+          <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <radialGradient id="h1a" cx="60%" cy="40%" r="70%"><stop offset="0%" stop-color="#5a3e28"/><stop offset="100%" stop-color="#2e1e10"/></radialGradient>
+              <radialGradient id="h1b" cx="50%" cy="50%" r="55%"><stop offset="0%" stop-color="#C8805A" stop-opacity=".2"/><stop offset="100%" stop-color="#C8805A" stop-opacity="0"/></radialGradient>
+            </defs>
+            <rect width="1440" height="900" fill="url(#h1a)"/>
+            <ellipse cx="1000" cy="300" rx="620" ry="520" fill="url(#h1b)"/>
+            <!-- 暖かい丸窓イメージ -->
+            <circle cx="1050" cy="440" r="320" fill="none" stroke="#F5E6D3" stroke-width="1" opacity=".22"/>
+            <circle cx="1050" cy="440" r="250" fill="none" stroke="#F5E6D3" stroke-width=".5" opacity=".14"/>
+            <circle cx="1050" cy="440" r="180" fill="#C8805A" opacity=".05"/>
+            <!-- 葉っぱ装飾 -->
+            <g fill="#6B9E6B" opacity=".16">
+              <ellipse cx="1340" cy="760" rx="20" ry="62" transform="rotate(-12,1340,760)"/>
+              <ellipse cx="1365" cy="735" rx="16" ry="55" transform="rotate(5,1365,735)"/>
+              <ellipse cx="1388" cy="765" rx="12" ry="46" transform="rotate(22,1388,765)"/>
+              <ellipse cx="1318" cy="770" rx="14" ry="42" transform="rotate(-26,1318,770)"/>
+              <rect x="1348" y="800" width="10" height="95" rx="3" fill="#7a5535"/>
+            </g>
+            <line x1="0" y1="2" x2="380" y2="2" stroke="#F5E6D3" stroke-width=".6" opacity=".2"/>
+          </svg>
+        </div>
+        <div class="hero-slide-overlay"></div>
+        <div class="hero-slide-content">
+          <div class="hero-badge">お子様・ご年配の方も大歓迎</div>
+          <p class="eyebrow eyebrow--light">Hair Salon · 地域密着</p>
+          <h2 class="hero-title"><strong>家族みんなで</strong><br>通える<br><em>かかりつけサロン</em></h2>
+          <p class="hero-sub">赤ちゃんからおじいちゃんおばあちゃんまで。<br>地域のみなさまに長く愛されるサロンを目指しています。</p>
+          <div class="hero-btns">
+            <button class="btn-main" onclick="showPage('booking')">ご予約はこちら</button>
+            <button class="btn-ghost" onclick="showPage('menu')">メニュー・料金を見る</button>
+          </div>
         </div>
       </div>
-      <div class="hero-visual">
-        <div class="hero-decoration"></div>
-        <i class="ti ti-scissors hero-scissors" aria-hidden="true"></i>
-        <div class="hero-tag">
-          <div class="hero-tag-label">Open Hours</div>
-          <div class="hero-tag-value">10:00 — 20:00</div>
+
+      <!-- スライド2 -->
+      <div class="hero-slide">
+        <div class="hero-slide-bg">
+          <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <radialGradient id="h2a" cx="35%" cy="50%" r="70%"><stop offset="0%" stop-color="#3a5030"/><stop offset="100%" stop-color="#1a2814"/></radialGradient>
+              <radialGradient id="h2b" cx="50%" cy="50%" r="55%"><stop offset="0%" stop-color="#6B9E6B" stop-opacity=".25"/><stop offset="100%" stop-color="#6B9E6B" stop-opacity="0"/></radialGradient>
+            </defs>
+            <rect width="1440" height="900" fill="url(#h2a)"/>
+            <ellipse cx="420" cy="420" rx="580" ry="500" fill="url(#h2b)"/>
+            <g fill="#A8CCA8" opacity=".14">
+              <ellipse cx="200" cy="700" rx="24" ry="72" transform="rotate(-10,200,700)"/>
+              <ellipse cx="230" cy="672" rx="18" ry="64" transform="rotate(6,230,672)"/>
+              <ellipse cx="258" cy="706" rx="14" ry="54" transform="rotate(22,258,706)"/>
+              <ellipse cx="175" cy="714" rx="16" ry="50" transform="rotate(-24,175,714)"/>
+              <rect x="212" y="756" width="12" height="130" rx="4" fill="#7a5535"/>
+            </g>
+            <g fill="#A8CCA8" opacity=".1">
+              <ellipse cx="1260" cy="660" rx="22" ry="68" transform="rotate(-14,1260,660)"/>
+              <ellipse cx="1285" cy="636" rx="17" ry="60" transform="rotate(4,1285,636)"/>
+              <ellipse cx="1308" cy="666" rx="13" ry="50" transform="rotate(20,1308,666)"/>
+              <rect x="1268" y="710" width="11" height="120" rx="3" fill="#7a5535"/>
+            </g>
+          </svg>
+        </div>
+        <div class="hero-slide-overlay"></div>
+        <div class="hero-slide-content">
+          <div class="hero-badge">丁寧なカウンセリング</div>
+          <p class="eyebrow eyebrow--light">Natural &amp; Gentle</p>
+          <h2 class="hero-title">自然に、<em>やさしく</em>、<br>あなたらしく</h2>
+          <p class="hero-sub">植物由来の薬剤と丁寧な施術で、<br>髪と頭皮にやさしいヘアケアをお届けします。</p>
+          <div class="hero-btns">
+            <button class="btn-main" onclick="showPage('menu')">メニューを見る</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- スライド3 -->
+      <div class="hero-slide">
+        <div class="hero-slide-bg">
+          <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <radialGradient id="h3a" cx="50%" cy="40%" r="70%"><stop offset="0%" stop-color="#4a3228"/><stop offset="100%" stop-color="#221610"/></radialGradient>
+            </defs>
+            <rect width="1440" height="900" fill="url(#h3a)"/>
+            <ellipse cx="720" cy="180" rx="720" ry="400" fill="#C8805A" opacity=".07"/>
+            <!-- ほっこりサロンのイメージ - 複数の丸 -->
+            <circle cx="360" cy="450" r="200" fill="none" stroke="#F5E6D3" stroke-width=".6" opacity=".18"/>
+            <circle cx="360" cy="450" r="150" fill="none" stroke="#F5E6D3" stroke-width=".3" opacity=".1"/>
+            <circle cx="1080" cy="450" r="200" fill="none" stroke="#F5E6D3" stroke-width=".6" opacity=".18"/>
+            <circle cx="1080" cy="450" r="150" fill="none" stroke="#F5E6D3" stroke-width=".3" opacity=".1"/>
+            <text x="720" y="500" font-family="Cormorant Garamond,serif" font-size="160" fill="#C8805A" opacity=".05" text-anchor="middle" font-style="italic">Family</text>
+          </svg>
+        </div>
+        <div class="hero-slide-overlay"></div>
+        <div class="hero-slide-content">
+          <div class="hero-badge">完全予約制</div>
+          <p class="eyebrow eyebrow--light">Welcome</p>
+          <h2 class="hero-title">ゆったりと<br>くつろげる<br><em>あなたの場所</em></h2>
+          <p class="hero-sub">完全予約制でお待たせしません。<br>ゆったりとした時間と丁寧な施術でリフレッシュ。</p>
+          <div class="hero-btns">
+            <button class="btn-main" onclick="showPage('booking')">今すぐ予約する</button>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="section section-white">
-      <div class="section-header">
-        <h2 class="section-title">Verdure について</h2>
-        <div class="section-line"></div>
-      </div>
-      <div class="features-grid">
-        <div class="feature-card">
-          <div class="feature-icon"><i class="ti ti-plant-2" aria-hidden="true"></i></div>
-          <div class="feature-title">オーガニックケア</div>
-          <div class="feature-text">厳選した植物由来の薬剤を使用。髪と頭皮への負担を最小限に抑えます。</div>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon"><i class="ti ti-user-check" aria-hidden="true"></i></div>
-          <div class="feature-title">経験豊富なスタイリスト</div>
-          <div class="feature-text">一人ひとりの骨格・髪質・ライフスタイルに合わせた提案をお届けします。</div>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon"><i class="ti ti-sparkles" aria-hidden="true"></i></div>
-          <div class="feature-title">完全個室ブース</div>
-          <div class="feature-text">周りを気にせずゆったりとお過ごしいただける、プライベート空間をご用意。</div>
-        </div>
-      </div>
+    <div class="hero-dots" id="hero-dots">
+      <button class="hero-dot active" onclick="goSlide(0)"></button>
+      <button class="hero-dot" onclick="goSlide(1)"></button>
+      <button class="hero-dot" onclick="goSlide(2)"></button>
     </div>
+    <div class="scroll-hint"><span>scroll</span><div class="scroll-hint-line"></div></div>
+  </section>
 
-    <div class="section">
-      <div class="section-header">
-        <h2 class="section-title">人気メニュー</h2>
-        <div class="section-line"></div>
-        <a href="#" onclick="showPage('menu'); return false;" class="section-more">すべて見る →</a>
-      </div>
-      <div class="popular-grid">
-        <div class="popular-card">
-          <div class="popular-name">カット</div>
-          <div class="popular-desc">カウンセリング + シャンプー込み</div>
-          <div class="popular-price">¥6,600〜</div>
-        </div>
-        <div class="popular-card">
-          <div class="popular-name">カラー</div>
-          <div class="popular-desc">リタッチ・フルカラー各種</div>
-          <div class="popular-price">¥8,800〜</div>
-        </div>
-        <div class="popular-card">
-          <div class="popular-name">トリートメント</div>
-          <div class="popular-desc">髪質改善・集中ケア</div>
-          <div class="popular-price">¥4,400〜</div>
-        </div>
-      </div>
-    </div>
+  <!-- お知らせバー -->
+  <div class="notice-bar">
+    <span class="notice-bar-badge">お知らせ</span>
+    <p>キッズカット（12歳以下）が毎月第1日曜日は特別価格でご利用いただけます。詳しくはお電話またはホットペッパーよりご確認ください。</p>
   </div>
 
-  <!-- ── MENU ── -->
-  <div class="page" id="page-menu">
-    <div class="section">
-      <div class="section-header">
-        <h2 class="section-title">メニュー</h2>
-        <div class="section-line"></div>
-      </div>
-      <div class="menu-grid">
-        <div class="menu-category">
-          <div class="menu-cat-title">カット</div>
-          <div class="menu-cat-sub">Cut</div>
-          <div class="menu-item">
-            <div><div class="menu-item-name">レディースカット</div><div class="menu-item-desc">シャンプー・ブロー込み</div></div>
-            <div class="menu-item-price">¥6,600</div>
-          </div>
-          <div class="menu-item">
-            <div><div class="menu-item-name">メンズカット</div><div class="menu-item-desc">シャンプー込み</div></div>
-            <div class="menu-item-price">¥5,500</div>
-          </div>
-          <div class="menu-item">
-            <div><div class="menu-item-name">前髪カット</div><div class="menu-item-desc">前髪のみ</div></div>
-            <div class="menu-item-price">¥1,100</div>
-          </div>
+  <!-- ようこそセクション -->
+  <section class="section-welcome">
+    <div class="welcome-wrap">
+      <div class="welcome-visual js-lift">
+        <div class="welcome-img">
+          <svg viewBox="0 0 500 375" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+            <rect width="500" height="375" fill="#F5E6D3"/>
+            <ellipse cx="250" cy="80" rx="380" ry="120" fill="#FFFAF4" opacity=".7"/>
+            <!-- サロン内観イメージ -->
+            <!-- 壁 -->
+            <rect x="0" y="200" width="500" height="175" fill="#F0D8C0" opacity=".5"/>
+            <!-- 鏡 -->
+            <rect x="60" y="40" width="100" height="170" rx="50" fill="none" stroke="#C8805A" stroke-width="2" opacity=".4"/>
+            <rect x="68" y="48" width="84" height="154" rx="42" fill="#FFFAF4" opacity=".3"/>
+            <!-- 鏡2 -->
+            <rect x="340" y="40" width="100" height="170" rx="50" fill="none" stroke="#C8805A" stroke-width="2" opacity=".4"/>
+            <rect x="348" y="48" width="84" height="154" rx="42" fill="#FFFAF4" opacity=".3"/>
+            <!-- チェア -->
+            <rect x="175" y="195" width="150" height="14" rx="7" fill="#C8805A" opacity=".45"/>
+            <rect x="225" y="130" width="50" height="75" rx="6" fill="#C8805A" opacity=".3"/>
+            <rect x="208" y="118" width="84" height="26" rx="10" fill="#C8805A" opacity=".38"/>
+            <rect x="183" y="207" width="24" height="70" rx="5" fill="#C8805A" opacity=".3"/>
+            <rect x="293" y="207" width="24" height="70" rx="5" fill="#C8805A" opacity=".3"/>
+            <!-- 植物 -->
+            <g fill="#6B9E6B" opacity=".38">
+              <ellipse cx="460" cy="280" rx="18" ry="54" transform="rotate(-10,460,280)"/>
+              <ellipse cx="478" cy="260" rx="14" ry="48" transform="rotate(6,478,260)"/>
+              <ellipse cx="442" cy="285" rx="12" ry="42" transform="rotate(-22,442,285)"/>
+              <rect x="458" y="318" width="9" height="55" rx="3" fill="#7a5535"/>
+            </g>
+            <!-- 看板 -->
+            <rect x="30" y="280" width="130" height="70" rx="6" fill="#fff" opacity=".7"/>
+            <text x="95" y="308" font-family="Cormorant Garamond,serif" font-size="11" fill="#4A3728" text-anchor="middle" font-style="italic">Verdure</text>
+            <text x="95" y="328" font-family="sans-serif" font-size="9" fill="#7A6A60" text-anchor="middle">Hair Salon</text>
+            <text x="95" y="343" font-family="sans-serif" font-size="8" fill="#C8805A" text-anchor="middle">Open 10:00〜19:00</text>
+          </svg>
         </div>
-        <div class="menu-category">
-          <div class="menu-cat-title">カラー</div>
-          <div class="menu-cat-sub">Color</div>
-          <div class="menu-item">
-            <div><div class="menu-item-name">リタッチカラー</div><div class="menu-item-desc">根元のみ</div></div>
-            <div class="menu-item-price">¥8,800</div>
-          </div>
-          <div class="menu-item">
-            <div><div class="menu-item-name">フルカラー</div><div class="menu-item-desc">全体染め</div></div>
-            <div class="menu-item-price">¥12,100</div>
-          </div>
-          <div class="menu-item">
-            <div><div class="menu-item-name">イルミナカラー</div><div class="menu-item-desc">外国人風透明感カラー</div></div>
-            <div class="menu-item-price">¥14,300</div>
-          </div>
-          <div class="menu-item">
-            <div><div class="menu-item-name">インナーカラー</div><div class="menu-item-desc">部分ポイントカラー</div></div>
-            <div class="menu-item-price">¥9,900〜</div>
-          </div>
-        </div>
-        <div class="menu-category">
-          <div class="menu-cat-title">パーマ</div>
-          <div class="menu-cat-sub">Perm</div>
-          <div class="menu-item">
-            <div><div class="menu-item-name">デジタルパーマ</div><div class="menu-item-desc">持ちの良い温感パーマ</div></div>
-            <div class="menu-item-price">¥17,600〜</div>
-          </div>
-          <div class="menu-item">
-            <div><div class="menu-item-name">コールドパーマ</div><div class="menu-item-desc">やわらかナチュラルウェーブ</div></div>
-            <div class="menu-item-price">¥13,200〜</div>
-          </div>
-          <div class="menu-item">
-            <div><div class="menu-item-name">縮毛矯正</div><div class="menu-item-desc">くせ毛・うねりを改善</div></div>
-            <div class="menu-item-price">¥19,800〜</div>
-          </div>
-        </div>
-        <div class="menu-category">
-          <div class="menu-cat-title">トリートメント</div>
-          <div class="menu-cat-sub">Treatment</div>
-          <div class="menu-item">
-            <div><div class="menu-item-name">ミルボントリートメント</div><div class="menu-item-desc">集中補修・ツヤ出し</div></div>
-            <div class="menu-item-price">¥4,400〜</div>
-          </div>
-          <div class="menu-item">
-            <div><div class="menu-item-name">髪質改善トリートメント</div><div class="menu-item-desc">酸熱系サロン専売品使用</div></div>
-            <div class="menu-item-price">¥11,000〜</div>
-          </div>
-          <div class="menu-item">
-            <div><div class="menu-item-name">ヘッドスパ</div><div class="menu-item-desc">頭皮ケア・リラクゼーション</div></div>
-            <div class="menu-item-price">¥5,500〜</div>
-          </div>
+        <div class="welcome-sticker">
+          <strong>創業</strong>
+          <span>15年</span>
+          <span>地域密着</span>
         </div>
       </div>
-      <div class="menu-note">
-        ※ 表示価格はすべて税込です。髪の長さ・量により料金が変わる場合がございます。カウンセリング時にご確認ください。
+      <div class="welcome-text js-reveal-left" style="--d:.15s">
+        <p class="eyebrow">Welcome</p>
+        <h2 class="section-heading">地域のみなさまへ<br>ようこそ</h2>
+        <p class="body-text">Verdure Hair Salon は、地域の皆さまに長く愛されるサロンを目指しています。赤ちゃんの初めてのカットから、ご年配の方の白髪染め・パーマまで、ご家族みんなでお気軽にご来店ください。</p>
+        <div class="welcome-points">
+          <div class="welcome-point"><div class="welcome-point-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7" r="4"/><path d="M5 21v-2a7 7 0 0 1 14 0v2"/></svg></div><div>お子様連れ大歓迎・キッズスペースあり</div></div>
+          <div class="welcome-point"><div class="welcome-point-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7" r="4"/><path d="M5 21v-2a7 7 0 0 1 14 0v2"/><line x1="8" y1="20" x2="16" y2="20"/></svg></div><div>ご年配の方も安心してご来店いただけます</div></div>
+          <div class="welcome-point"><div class="welcome-point-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 17V7h4a3 3 0 0 1 0 6H9"/></svg></div><div>無料駐車場完備（お車でお越しいただけます）</div></div>
+          <div class="welcome-point"><div class="welcome-point-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div><div>完全予約制で待ち時間なし</div></div>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <!-- ── STYLISTS ── -->
-  <div class="page" id="page-stylists">
-    <div class="section">
-      <div class="section-header">
-        <h2 class="section-title">スタイリスト紹介</h2>
-        <div class="section-line"></div>
+  <!-- 3つのこだわり -->
+  <section class="section-concept">
+    <div class="concept-heading js-reveal">
+      <p class="eyebrow">Our Promise</p>
+      <h2 class="section-heading">私たちのお約束</h2>
+    </div>
+    <div class="concept-cards">
+      <div class="concept-card js-lift" style="--d:.05s">
+        <div class="cc-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22V11"/><path d="M5 3c0 0 2 5 7 8s10 3 10 3c0 0-2-5-7-8S5 3 5 3z"/><path d="M12 11C9 8 4 6 4 6c0 0 1 5 4 8s7 5 7 5"/></svg></div>
+        <div class="cc-title">髪と頭皮にやさしい</div>
+        <div class="cc-text">植物由来の厳選薬剤を使用。敏感肌の方や小さなお子様にも安心してご利用いただけます。</div>
       </div>
-      <div class="stylists-grid">
-        <div class="stylist-card">
-          <div class="stylist-avatar stylist-avatar--sage">
-            <i class="ti ti-user-circle" aria-hidden="true"></i>
+      <div class="concept-card js-lift" style="--d:.18s">
+        <div class="cc-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+        <div class="cc-title">丁寧なカウンセリング</div>
+        <div class="cc-text">お一人おひとりのお悩みやご要望をしっかりお聞きします。お気軽にご相談ください。</div>
+      </div>
+      <div class="concept-card js-lift" style="--d:.32s">
+        <div class="cc-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.5z"/><path d="M9 21V12h6v9"/></svg></div>
+        <div class="cc-title">アットホームな雰囲気</div>
+        <div class="cc-text">地域に根ざして15年。ご近所のような気軽さで通っていただける居心地のいいサロンです。</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 人気メニュー -->
+  <section class="section-popular">
+    <div class="popular-header">
+      <div class="js-reveal-left">
+        <p class="eyebrow">Service</p>
+        <h2 class="section-heading">人気メニュー・料金</h2>
+      </div>
+      <a href="#" onclick="showPage('menu');return false;" class="link-more">すべてのメニューを見る →</a>
+    </div>
+    <div class="popular-list">
+      <div class="popular-item js-reveal" style="--d:.05s">
+        <span class="pi-num">01</span>
+        <span class="pi-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><line x1="20" y1="4" x2="8.12" y2="15.88"/><line x1="14.47" y1="14.48" x2="20" y2="20"/><line x1="8.12" y1="8.12" x2="12" y2="12"/></svg></span>
+        <div class="pi-body"><div class="pi-name">カット（大人）</div><div class="pi-desc">シャンプー・ブロー込み / カウンセリング付き</div></div>
+        <span class="pi-price">¥4,400〜</span>
+      </div>
+      <div class="popular-item js-reveal" style="--d:.12s">
+        <span class="pi-num">02</span>
+        <span class="pi-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a6 6 0 0 1 12 0v2"/></svg></span>
+        <div class="pi-body"><div class="pi-name">カット（中学生以下）<span class="pi-badge">キッズ</span></div><div class="pi-desc">お子様向け / 保護者の方がご一緒でも安心</div></div>
+        <span class="pi-price">¥2,200〜</span>
+      </div>
+      <div class="popular-item js-reveal" style="--d:.2s">
+        <span class="pi-num">03</span>
+        <span class="pi-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg></span>
+        <div class="pi-body"><div class="pi-name">カラー（白髪染め含む）</div><div class="pi-desc">リタッチ・フルカラー各種</div></div>
+        <span class="pi-price">¥6,600〜</span>
+      </div>
+      <div class="popular-item js-reveal" style="--d:.28s">
+        <span class="pi-num">04</span>
+        <span class="pi-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12c1.5-2 3-2 4.5 0s3 2 4.5 0 3-2 4.5 0 3 2 4.5 0"/><path d="M2 17c1.5-2 3-2 4.5 0s3 2 4.5 0 3-2 4.5 0 3 2 4.5 0"/></svg></span>
+        <div class="pi-body"><div class="pi-name">パーマ</div><div class="pi-desc">デジタル・コールド各種</div></div>
+        <span class="pi-price">¥9,900〜</span>
+      </div>
+      <div class="popular-item js-reveal" style="--d:.36s">
+        <span class="pi-num">05</span>
+        <span class="pi-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 0 1 7 7c0 2.5-1 4.5-2.5 6L15 17H9l-1.5-2C6 13.5 5 11.5 5 9a7 7 0 0 1 7-7z"/><line x1="9" y1="17" x2="9" y2="21"/><line x1="15" y1="17" x2="15" y2="21"/><line x1="9" y1="21" x2="15" y2="21"/></svg></span>
+        <div class="pi-body"><div class="pi-name">ヘッドスパ</div><div class="pi-desc">頭皮ケア・リラクゼーション</div></div>
+        <span class="pi-price">¥3,300〜</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- スタイリストカルーセル -->
+  <section class="section-stylists">
+    <div class="stylists-header">
+      <div class="js-reveal-left">
+        <p class="eyebrow">Our Team</p>
+        <h2 class="section-heading">スタッフ紹介</h2>
+      </div>
+      <div class="carousel-arrows">
+        <button class="c-arrow" id="c-prev">&#8592;</button>
+        <button class="c-arrow" id="c-next">&#8594;</button>
+      </div>
+    </div>
+    <div class="carousel-viewport">
+      <div class="carousel-track" id="carousel-track">
+        <div class="stylist-card js-lift" style="--d:.05s">
+          <div class="stylist-avatar" style="background:#FDF5F0;">
+            <svg viewBox="0 0 290 290" xmlns="http://www.w3.org/2000/svg">
+              <rect width="290" height="290" fill="#FDF5F0"/>
+              <ellipse cx="145" cy="104" rx="58" ry="68" fill="#E8C8A8"/>
+              <path d="M92,120 C74,220 86,298 104,282 Q123,294 145,292 Q167,294 186,282 C204,298 216,220 198,120" fill="#C4906A" opacity=".6"/>
+              <circle cx="145" cy="98" r="45" fill="#D4A880"/>
+            </svg>
           </div>
           <div class="stylist-info">
             <div class="stylist-name">田中 美咲</div>
-            <div class="stylist-role">Top Stylist · 10年</div>
-            <div class="stylist-bio">ナチュラルなグラデーションカラーが得意。お客様一人ひとりに合ったスタイルを丁寧にご提案します。</div>
-            <div class="stylist-tags">
-              <span class="stylist-tag">カラー</span>
-              <span class="stylist-tag">イルミナ</span>
-              <span class="stylist-tag">ショートヘア</span>
-            </div>
+            <div class="stylist-role">トップスタイリスト・経験10年</div>
+            <p class="stylist-bio">カラーとカットが得意。お子様の初めてのカットも丁寧に対応します。お気軽にご相談ください。</p>
+            <div class="stylist-tags"><span>カラー</span><span>キッズ対応</span><span>白髪染め</span></div>
           </div>
         </div>
-        <div class="stylist-card">
-          <div class="stylist-avatar stylist-avatar--pink">
-            <i class="ti ti-user-circle" aria-hidden="true"></i>
+        <div class="stylist-card js-lift" style="--d:.18s">
+          <div class="stylist-avatar" style="background:#EDF5ED;">
+            <svg viewBox="0 0 290 290" xmlns="http://www.w3.org/2000/svg">
+              <rect width="290" height="290" fill="#EDF5ED"/>
+              <ellipse cx="145" cy="104" rx="58" ry="68" fill="#A8C8A4"/>
+              <path d="M96,118 C88,175 100,240 116,268 Q128,278 145,276 Q162,278 174,268 C190,240 202,175 194,118" fill="#6A9866" opacity=".58"/>
+              <path d="M96,116 C86,84 96,50 114,30 Q128,12 145,14 Q162,12 176,30 C194,50 204,84 194,116" fill="#5A8456" opacity=".62"/>
+              <circle cx="145" cy="98" r="45" fill="#84B880"/>
+            </svg>
           </div>
           <div class="stylist-info">
             <div class="stylist-name">山本 健一</div>
-            <div class="stylist-role">Senior Stylist · 7年</div>
-            <div class="stylist-bio">メンズカットとパーマを中心に活躍。骨格に合わせたスタイリングで男性のビジネスシーンをサポート。</div>
-            <div class="stylist-tags">
-              <span class="stylist-tag">メンズカット</span>
-              <span class="stylist-tag">パーマ</span>
-              <span class="stylist-tag">バーバー風</span>
-            </div>
+            <div class="stylist-role">シニアスタイリスト・経験7年</div>
+            <p class="stylist-bio">メンズカットとパーマが専門。ご年配の方のシャンプー・カットも喜んで承ります。</p>
+            <div class="stylist-tags"><span>メンズカット</span><span>シニア対応</span><span>パーマ</span></div>
           </div>
         </div>
-        <div class="stylist-card">
-          <div class="stylist-avatar stylist-avatar--mint">
-            <i class="ti ti-user-circle" aria-hidden="true"></i>
+        <div class="stylist-card js-lift" style="--d:.32s">
+          <div class="stylist-avatar" style="background:#FFF8F0;">
+            <svg viewBox="0 0 290 290" xmlns="http://www.w3.org/2000/svg">
+              <rect width="290" height="290" fill="#FFF8F0"/>
+              <ellipse cx="145" cy="104" rx="58" ry="68" fill="#F0C8A8"/>
+              <path d="M92,122 C80,188 95,256 112,278 Q126,288 145,286 Q164,288 178,278 C195,256 210,188 198,122" fill="#D4906A" opacity=".55"/>
+              <path d="M92,120 C80,78 94,42 114,22 Q128,6 145,8 Q162,6 176,22 C196,42 210,78 198,120" fill="#C07858" opacity=".6"/>
+              <circle cx="145" cy="98" r="45" fill="#E0A878"/>
+            </svg>
           </div>
           <div class="stylist-info">
             <div class="stylist-name">佐藤 あおい</div>
-            <div class="stylist-role">Stylist · 4年</div>
-            <div class="stylist-bio">ヘッドスパと髪質改善を専門に学んできた実力派。くせ毛・ダメージ毛でお悩みの方はぜひご相談ください。</div>
-            <div class="stylist-tags">
-              <span class="stylist-tag">髪質改善</span>
-              <span class="stylist-tag">縮毛矯正</span>
-              <span class="stylist-tag">ヘッドスパ</span>
-            </div>
+            <div class="stylist-role">スタイリスト・経験4年</div>
+            <p class="stylist-bio">トリートメントとヘッドスパが得意。産後の抜け毛や頭皮のお悩みもお気軽にご相談を。</p>
+            <div class="stylist-tags"><span>ヘッドスパ</span><span>髪質改善</span><span>産後ケア</span></div>
+          </div>
+        </div>
+        <div class="stylist-card js-lift" style="--d:.46s">
+          <div class="stylist-avatar" style="background:#F0F8F0;">
+            <svg viewBox="0 0 290 290" xmlns="http://www.w3.org/2000/svg">
+              <rect width="290" height="290" fill="#F0F8F0"/>
+              <ellipse cx="145" cy="104" rx="58" ry="68" fill="#B8D4C8"/>
+              <path d="M92,120 C82,192 98,255 115,275 Q128,285 145,283 Q162,285 175,275 C192,255 208,192 198,120" fill="#78A898" opacity=".6"/>
+              <path d="M92,118 C82,80 96,46 116,26 Q130,8 145,10 Q160,8 174,26 C194,46 208,80 198,118" fill="#6A9888" opacity=".64"/>
+              <circle cx="145" cy="98" r="45" fill="#90BCAC"/>
+            </svg>
+          </div>
+          <div class="stylist-info">
+            <div class="stylist-name">鈴木 花</div>
+            <div class="stylist-role">ジュニアスタイリスト・経験2年</div>
+            <p class="stylist-bio">明るい笑顔でお迎えします。お子様の施術が大好きで、泣いてしまっても焦らず対応します。</p>
+            <div class="stylist-tags"><span>キッズ専門</span><span>カット</span><span>ブロー</span></div>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <!-- ── BOOKING ── -->
-  <div class="page" id="page-booking">
-    <div class="section">
-      <div class="section-header">
-        <h2 class="section-title">ご予約</h2>
-        <div class="section-line"></div>
+  <!-- ギャラリー -->
+  <section class="section-gallery">
+    <div class="gallery-intro">
+      <div class="js-reveal-left">
+        <p class="eyebrow">Gallery</p>
+        <h2 class="section-heading">スタイルギャラリー</h2>
       </div>
-      <div class="booking-layout">
-        <div class="hpb-card">
-          <div class="hpb-logo">Hot Pepper Beauty</div>
-          <div class="hpb-title">オンライン予約は<br>ホットペッパービューティーから</div>
-          <div class="hpb-desc">24時間いつでもご予約いただけます。クーポンも豊富にご用意しています。初回来店の方もお気軽にどうぞ。</div>
-          <!-- ★ href を実際のホットペッパービューティーのURLに変更してください -->
-          <a class="hpb-btn" href="https://beauty.hotpepper.jp/" target="_blank" rel="noopener">
-            <i class="ti ti-calendar-event" aria-hidden="true"></i> ホットペッパーで予約する
-          </a>
-          <div class="hpb-note">24時間受付 · クーポンあり · 口コミ掲載中</div>
-        </div>
-        <div class="contact-info">
-          <h3 class="contact-heading">お電話でもご予約いただけます</h3>
-          <div class="contact-item">
-            <div class="contact-icon"><i class="ti ti-phone" aria-hidden="true"></i></div>
-            <div>
-              <div class="contact-label">電話番号</div>
-              <!-- ★ 電話番号を変更してください -->
-              <div class="contact-value contact-value--large">03-XXXX-XXXX</div>
-            </div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-icon"><i class="ti ti-clock" aria-hidden="true"></i></div>
-            <div>
-              <div class="contact-label">営業時間</div>
-              <div class="contact-value">火〜金：10:00 — 20:00<br>土・日・祝：9:00 — 19:00<br>定休日：月曜日</div>
-            </div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-icon"><i class="ti ti-map-pin" aria-hidden="true"></i></div>
-            <div>
-              <div class="contact-label">アクセス</div>
-              <!-- ★ 住所を変更してください -->
-              <div class="contact-value">東京都○○区○○町 1-2-3<br>○○駅 徒歩3分</div>
-            </div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-icon"><i class="ti ti-brand-instagram" aria-hidden="true"></i></div>
-            <div>
-              <div class="contact-label">SNS</div>
-              <!-- ★ Instagramアカウント名を変更してください -->
-              <div class="contact-value">@verdure_hair<br><span class="contact-value--sub">最新スタイルをInstagramで公開中</span></div>
-            </div>
-          </div>
-        </div>
+      <p class="body-text js-reveal" style="--d:.1s">タップで拡大できます</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="g-item g-item--wide js-lift" style="--d:.05s" onclick="openModal('m1')">
+        <svg viewBox="0 0 700 220" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+          <rect width="700" height="220" fill="#2a1e12"/><ellipse cx="350" cy="70" rx="160" ry="185" fill="#221408" opacity=".9"/>
+          <path d="M200,90 C178,174 194,290 215,315 Q276,334 350,331 Q424,334 485,315 C506,290 522,174 500,90" fill="#120a04"/>
+          <path d="M218,85 C196,155 210,248 224,306" stroke="#C8805A" stroke-width="1.5" fill="none" opacity=".3"/>
+          <path d="M482,85 C504,155 490,248 476,306" stroke="#6B9E6B" stroke-width="1.5" fill="none" opacity=".28"/>
+          <ellipse cx="350" cy="78" rx="108" ry="122" fill="#1e1008" opacity=".95"/>
+          <ellipse cx="350" cy="62" rx="74" ry="84" fill="#C8805A" opacity=".13"/>
+          <text x="350" y="18" font-family="Cormorant Garamond,serif" font-size="14" fill="#FFFAF4" opacity=".45" text-anchor="middle" font-style="italic">Natural Long</text>
+          <text x="350" y="210" font-family="sans-serif" font-size="10" fill="#C8805A" opacity=".8" text-anchor="middle" letter-spacing="3">ELEGANT</text>
+        </svg>
+        <div class="g-item-label">ナチュラルロング</div>
+      </div>
+      <div class="g-item g-item--tall js-lift" style="--d:.15s" onclick="openModal('m2')">
+        <svg viewBox="0 0 230 440" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+          <rect width="230" height="440" fill="#181a14"/><ellipse cx="115" cy="148" rx="86" ry="100" fill="#201e14" opacity=".9"/>
+          <path d="M62,165 C47,255 56,376 73,418 Q92,430 115,428 Q138,430 157,418 C174,376 183,255 168,165" fill="#0c0e08"/>
+          <path d="M72,162 C55,232 64,330 70,406" stroke="#6B9E6B" stroke-width="1.8" fill="none" opacity=".3"/>
+          <path d="M158,162 C175,232 166,330 160,406" stroke="#6B9E6B" stroke-width="1.8" fill="none" opacity=".3"/>
+          <ellipse cx="115" cy="140" rx="58" ry="70" fill="#161a10" opacity=".95"/>
+          <ellipse cx="115" cy="126" rx="40" ry="50" fill="#6B9E6B" opacity=".15"/>
+          <text x="115" y="18" font-family="Cormorant Garamond,serif" font-size="12" fill="#FFFAF4" opacity=".45" text-anchor="middle" font-style="italic">Wave</text>
+          <text x="115" y="428" font-family="sans-serif" font-size="9" fill="#6B9E6B" opacity=".8" text-anchor="middle" letter-spacing="2">NATURAL</text>
+        </svg>
+        <div class="g-item-label">ウェーブスタイル</div>
+      </div>
+      <div class="g-item js-lift" style="--d:.22s" onclick="openModal('m3')">
+        <svg viewBox="0 0 230 220" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+          <rect width="230" height="220" fill="#141812"/><ellipse cx="115" cy="84" rx="82" ry="96" fill="#182014" opacity=".9"/>
+          <path d="M64,98 C55,148 68,200 82,218 Q96,226 115,224 Q134,226 148,218 C162,200 175,148 166,98" fill="#0a1008"/>
+          <path d="M64,96 C54,66 64,36 82,18 Q96,2 115,4 Q134,2 148,18 C166,36 176,66 166,96" fill="#0e1610"/>
+          <ellipse cx="115" cy="80" rx="56" ry="66" fill="#141e12" opacity=".9"/>
+          <ellipse cx="115" cy="68" rx="38" ry="46" fill="#6B9E6B" opacity=".14"/>
+          <text x="115" y="16" font-family="Cormorant Garamond,serif" font-size="11" fill="#FFFAF4" opacity=".45" text-anchor="middle" font-style="italic">Short Bob</text>
+          <text x="115" y="212" font-family="sans-serif" font-size="9" fill="#6B9E6B" opacity=".8" text-anchor="middle" letter-spacing="2">COOL</text>
+        </svg>
+        <div class="g-item-label">ショートボブ</div>
+      </div>
+      <div class="g-item js-lift" style="--d:.3s" onclick="openModal('m4')">
+        <svg viewBox="0 0 230 220" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+          <rect width="230" height="220" fill="#1a1410"/><ellipse cx="115" cy="84" rx="84" ry="98" fill="#241810" opacity=".9"/>
+          <path d="M62,100 C52,155 66,205 81,220 Q96,228 115,226 Q134,228 149,220 C164,205 178,155 168,100" fill="#100c06"/>
+          <path d="M63,97 C52,122 62,155 60,190 Q58,208 60,220" stroke="#C8805A" stroke-width="2.2" fill="none" opacity=".28"/>
+          <path d="M167,97 C178,122 168,155 170,190 Q172,208 170,220" stroke="#C8805A" stroke-width="2.2" fill="none" opacity=".28"/>
+          <ellipse cx="115" cy="80" rx="58" ry="68" fill="#1c1008" opacity=".9"/>
+          <ellipse cx="115" cy="68" rx="40" ry="48" fill="#C8805A" opacity=".13"/>
+          <text x="115" y="16" font-family="Cormorant Garamond,serif" font-size="11" fill="#FFFAF4" opacity=".45" text-anchor="middle" font-style="italic">Wave Bob</text>
+          <text x="115" y="212" font-family="sans-serif" font-size="9" fill="#C8805A" opacity=".8" text-anchor="middle" letter-spacing="2">FEMININE</text>
+        </svg>
+        <div class="g-item-label">ゆるふわボブ</div>
+      </div>
+      <div class="g-item js-lift" style="--d:.38s" onclick="openModal('m5')">
+        <svg viewBox="0 0 230 220" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+          <rect width="230" height="220" fill="#10180c"/><ellipse cx="115" cy="84" rx="82" ry="95" fill="#182214" opacity=".9"/>
+          <path d="M63,100 C53,155 67,204 82,220 Q97,228 115,226 Q133,228 148,220 C163,204 177,155 167,100" fill="#0a1006"/>
+          <path d="M63,97 C53,70 63,42 81,22 Q96,4 115,6 Q134,4 149,22 C167,42 177,70 167,97" fill="#0e1a08"/>
+          <ellipse cx="115" cy="80" rx="56" ry="66" fill="#141e10" opacity=".9"/>
+          <ellipse cx="115" cy="68" rx="38" ry="46" fill="#A8CCA8" opacity=".16"/>
+          <text x="115" y="16" font-family="Cormorant Garamond,serif" font-size="11" fill="#FFFAF4" opacity=".45" text-anchor="middle" font-style="italic">Natural Bob</text>
+          <text x="115" y="212" font-family="sans-serif" font-size="9" fill="#6B9E6B" opacity=".8" text-anchor="middle" letter-spacing="2">FRESH</text>
+        </svg>
+        <div class="g-item-label">ナチュラルボブ</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 家族向けメッセージ -->
+  <section class="section-family js-reveal">
+        <h2 class="family-title">年齢を問わず、<em>家族みんな</em>で<br>通っていただけるサロンです</h2>
+    <p class="family-text">初めての散髪に緊張するお子様も、白髪が気になりはじめたご年配の方も、産後で久しぶりのサロンというお母さんも。どなたでも安心してお越しください。スタッフ一同、笑顔でお迎えします。</p>
+    <div class="family-tags">
+      <span class="family-tag">— キッズスペースあり</span>
+      <span class="family-tag">— バリアフリー対応</span>
+      <span class="family-tag">— 駐車場無料</span>
+      <span class="family-tag">— 完全予約制</span>
+      <span class="family-tag">— 白髪染め・シニア歓迎</span>
+      <span class="family-tag">— 産後ケア相談OK</span>
+    </div>
+  </section>
+
+  <!-- アクセス -->
+  <section class="section-access">
+    <div class="js-reveal" style="margin-bottom:36px;">
+      <p class="eyebrow">Access</p>
+      <h2 class="section-heading">アクセス・店舗情報</h2>
+    </div>
+    <div class="access-wrap">
+      <div class="access-map js-lift">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.4882635485!2d139.70086!3d35.65813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b563b00109f%3A0x337328def1e2ab26!2z5riL6LC35Yy65Y2X5Yy6!5e0!3m2!1sja!2sjp!4v1680000000000" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Verdure Hair Salon マップ"></iframe>
+      </div>
+      <div class="access-info js-reveal-left" style="--d:.15s">
+        <h3 class="access-heading">店舗情報</h3>
+        <div class="access-item"><div class="ai-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C8.69 2 6 4.69 6 8c0 4.5 6 14 6 14s6-9.5 6-14c0-3.31-2.69-6-6-6z"/><circle cx="12" cy="8" r="2"/></svg></div><div><div class="ai-label">住所</div><div class="ai-value">〒150-0001<br>東京都渋谷区神宮前 3-14-8<br>グリーンテラスビル 2F</div></div></div>
+        <div class="access-item"><div class="ai-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17H3v-5l2-5h14l2 5v5h-2"/><circle cx="7.5" cy="17.5" r="2.5"/><circle cx="16.5" cy="17.5" r="2.5"/></svg></div><div><div class="ai-label">駐車場</div><div class="ai-value">無料駐車場3台あり<br>お車でお越しの方もお気軽に</div></div></div>
+        <div class="access-item"><div class="ai-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><div><div class="ai-label">営業時間</div><div class="ai-value">火〜土：10:00 〜 19:00<br>日・祝：10:00 〜 18:00<br>定休日：月曜日</div></div></div>
+        <div class="access-item"><div class="ai-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.86 19.86 0 0 1 3.09 4.18 2 2 0 0 1 5.07 2h3a2 2 0 0 1 2 1.72c.13 1 .37 1.97.72 2.9a2 2 0 0 1-.45 2.11L9.09 9.91a16 16 0 0 0 6 6l1.18-1.18a2 2 0 0 1 2.11-.45c.93.35 1.9.59 2.9.72A2 2 0 0 1 22 16.92z"/></svg></div><div><div class="ai-label">お電話</div><div class="ai-value ai-value--lg">03-XXXX-XXXX</div></div></div>
+      </div>
+    </div>
+  </section>
+
+</div><!-- /page-home -->
+
+<!-- ══ MENU ══ -->
+<div class="page" id="page-menu">
+  <div class="page-hero">
+    <div class="page-hero-bg"><svg viewBox="0 0 1440 240" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><rect width="1440" height="240" fill="#3C2E22"/><ellipse cx="720" cy="-30" rx="900" ry="240" fill="#C8805A" opacity=".08"/><line x1="0" y1="239" x2="1440" y2="239" stroke="#C8805A" stroke-width=".5" opacity=".3"/></svg></div>
+    <div class="page-hero-content js-reveal"><p class="eyebrow eyebrow--light">Service</p><h1 class="page-h1">メニュー・料金</h1></div>
+  </div>
+  <div class="section">
+    <p class="body-text js-reveal" style="margin-bottom:36px;">表示価格はすべて税込です。初回ご来店の方はカウンセリング無料です。お気軽にご相談ください。</p>
+    <div class="menu-grid">
+      <div class="menu-cat js-lift" style="--d:.05s">
+        <div class="menu-cat-head"> カット <em>Cut</em></div>
+        <div class="menu-item"><div><b>レディースカット</b><small>シャンプー・ブロー込み</small></div><span>¥4,400</span></div>
+        <div class="menu-item"><div><b>メンズカット</b><small>シャンプー込み</small></div><span>¥3,850</span></div>
+        <div class="menu-item"><div><b>キッズカット（中学生以下）</b><small>保護者の方も安心の対応</small></div><span>¥2,200</span></div>
+        <div class="menu-item"><div><b>シニアカット（60歳以上）</b><small>ゆっくり丁寧に対応します</small></div><span>¥3,300</span></div>
+        <div class="menu-item"><div><b>前髪カット</b><small>前髪のみ</small></div><span>¥880</span></div>
+      </div>
+      <div class="menu-cat js-lift" style="--d:.15s">
+        <div class="menu-cat-head"> カラー <em>Color</em></div>
+        <div class="menu-item"><div><b>リタッチカラー（白髪染め可）</b><small>根元のみ</small></div><span>¥6,600</span></div>
+        <div class="menu-item"><div><b>フルカラー</b><small>全体染め</small></div><span>¥9,900</span></div>
+        <div class="menu-item"><div><b>ハイライト</b><small>部分的な明るさをプラス</small></div><span>¥7,700〜</span></div>
+        <div class="menu-item"><div><b>イルミナカラー</b><small>透明感のある外国人風カラー</small></div><span>¥11,000</span></div>
+      </div>
+      <div class="menu-cat js-lift" style="--d:.25s">
+        <div class="menu-cat-head"> パーマ <em>Perm</em></div>
+        <div class="menu-item"><div><b>デジタルパーマ</b><small>ツヤのあるゆるふわカール</small></div><span>¥14,300〜</span></div>
+        <div class="menu-item"><div><b>コールドパーマ</b><small>やわらかいナチュラルウェーブ</small></div><span>¥9,900〜</span></div>
+        <div class="menu-item"><div><b>縮毛矯正</b><small>くせ毛・うねりのお悩みに</small></div><span>¥16,500〜</span></div>
+      </div>
+      <div class="menu-cat js-lift" style="--d:.35s">
+        <div class="menu-cat-head"> トリートメント <em>Treatment</em></div>
+        <div class="menu-item"><div><b>ミルボントリートメント</b><small>ツヤ・まとまり改善</small></div><span>¥3,300〜</span></div>
+        <div class="menu-item"><div><b>髪質改善トリートメント</b><small>ダメージが気になる方に</small></div><span>¥8,800〜</span></div>
+        <div class="menu-item"><div><b>ヘッドスパ</b><small>頭皮ケア・リラクゼーション</small></div><span>¥3,300〜</span></div>
+        <div class="menu-item"><div><b>産後ヘアケアコース</b><small>抜け毛・頭皮のお悩みに</small></div><span>¥5,500</span></div>
+      </div>
+    </div>
+    <p class="menu-note js-reveal">※ 表示価格はすべて税込です。髪の長さ・量により料金が変わる場合がございます。初めてご来店の方はカウンセリング無料で承ります。お気軽にご相談ください。</p>
+  </div>
+</div>
+
+<!-- ══ STYLISTS ══ -->
+<div class="page" id="page-stylists">
+  <div class="page-hero">
+    <div class="page-hero-bg"><svg viewBox="0 0 1440 240" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><rect width="1440" height="240" fill="#3C2E22"/><ellipse cx="720" cy="-30" rx="900" ry="240" fill="#C8805A" opacity=".08"/><line x1="0" y1="239" x2="1440" y2="239" stroke="#C8805A" stroke-width=".5" opacity=".3"/></svg></div>
+    <div class="page-hero-content js-reveal"><p class="eyebrow eyebrow--light">Our Team</p><h1 class="page-h1">スタッフ紹介</h1></div>
+  </div>
+  <div class="section">
+    <p class="body-text js-reveal" style="margin-bottom:40px;">スタッフ一同、皆さまのご来店を心よりお待ちしております。どんな小さなお悩みもお気軽にご相談ください。</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:24px;">
+      <div class="stylist-card js-lift" style="--d:.05s"><div class="stylist-avatar" style="background:#FDF5F0;"><svg viewBox="0 0 290 290" xmlns="http://www.w3.org/2000/svg"><rect width="290" height="290" fill="#FDF5F0"/><ellipse cx="145" cy="104" rx="58" ry="68" fill="#E8C8A8"/><path d="M92,120 C74,220 86,298 104,282 Q123,294 145,292 Q167,294 186,282 C204,298 216,220 198,120" fill="#C4906A" opacity=".6"/><circle cx="145" cy="98" r="45" fill="#D4A880"/></svg></div><div class="stylist-info"><div class="stylist-name">田中 美咲</div><div class="stylist-role">トップスタイリスト・経験10年</div><p class="stylist-bio">カラーとカットが得意。お子様の初めてのカットも丁寧に対応します。お気軽にご相談ください。</p><div class="stylist-tags"><span>カラー</span><span>キッズ対応</span><span>白髪染め</span></div></div></div>
+      <div class="stylist-card js-lift" style="--d:.18s"><div class="stylist-avatar" style="background:#EDF5ED;"><svg viewBox="0 0 290 290" xmlns="http://www.w3.org/2000/svg"><rect width="290" height="290" fill="#EDF5ED"/><ellipse cx="145" cy="104" rx="58" ry="68" fill="#A8C8A4"/><path d="M96,118 C88,175 100,240 116,268 Q128,278 145,276 Q162,278 174,268 C190,240 202,175 194,118" fill="#6A9866" opacity=".58"/><path d="M96,116 C86,84 96,50 114,30 Q128,12 145,14 Q162,12 176,30 C194,50 204,84 194,116" fill="#5A8456" opacity=".62"/><circle cx="145" cy="98" r="45" fill="#84B880"/></svg></div><div class="stylist-info"><div class="stylist-name">山本 健一</div><div class="stylist-role">シニアスタイリスト・経験7年</div><p class="stylist-bio">メンズカットとパーマが専門。ご年配の方のシャンプー・カットも喜んで承ります。</p><div class="stylist-tags"><span>メンズカット</span><span>シニア対応</span><span>パーマ</span></div></div></div>
+      <div class="stylist-card js-lift" style="--d:.32s"><div class="stylist-avatar" style="background:#FFF8F0;"><svg viewBox="0 0 290 290" xmlns="http://www.w3.org/2000/svg"><rect width="290" height="290" fill="#FFF8F0"/><ellipse cx="145" cy="104" rx="58" ry="68" fill="#F0C8A8"/><path d="M92,122 C80,188 95,256 112,278 Q126,288 145,286 Q164,288 178,278 C195,256 210,188 198,122" fill="#D4906A" opacity=".55"/><path d="M92,120 C80,78 94,42 114,22 Q128,6 145,8 Q162,6 176,22 C196,42 210,78 198,120" fill="#C07858" opacity=".6"/><circle cx="145" cy="98" r="45" fill="#E0A878"/></svg></div><div class="stylist-info"><div class="stylist-name">佐藤 あおい</div><div class="stylist-role">スタイリスト・経験4年</div><p class="stylist-bio">トリートメントとヘッドスパが得意。産後の抜け毛や頭皮のお悩みもお気軽にご相談を。</p><div class="stylist-tags"><span>ヘッドスパ</span><span>髪質改善</span><span>産後ケア</span></div></div></div>
+      <div class="stylist-card js-lift" style="--d:.46s"><div class="stylist-avatar" style="background:#F0F8F0;"><svg viewBox="0 0 290 290" xmlns="http://www.w3.org/2000/svg"><rect width="290" height="290" fill="#F0F8F0"/><ellipse cx="145" cy="104" rx="58" ry="68" fill="#B8D4C8"/><path d="M92,120 C82,192 98,255 115,275 Q128,285 145,283 Q162,285 175,275 C192,255 208,192 198,120" fill="#78A898" opacity=".6"/><path d="M92,118 C82,80 96,46 116,26 Q130,8 145,10 Q160,8 174,26 C194,46 208,80 198,118" fill="#6A9888" opacity=".64"/><circle cx="145" cy="98" r="45" fill="#90BCAC"/></svg></div><div class="stylist-info"><div class="stylist-name">鈴木 花</div><div class="stylist-role">ジュニアスタイリスト・経験2年</div><p class="stylist-bio">明るい笑顔でお迎えします。お子様の施術が大好きで、泣いてしまっても焦らず対応します。</p><div class="stylist-tags"><span>キッズ専門</span><span>カット</span><span>ブロー</span></div></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ BOOKING ══ -->
+<div class="page" id="page-booking">
+  <div class="page-hero">
+    <div class="page-hero-bg"><svg viewBox="0 0 1440 240" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><rect width="1440" height="240" fill="#3C2E22"/><ellipse cx="720" cy="-30" rx="900" ry="240" fill="#C8805A" opacity=".08"/><line x1="0" y1="239" x2="1440" y2="239" stroke="#C8805A" stroke-width=".5" opacity=".3"/></svg></div>
+    <div class="page-hero-content js-reveal"><p class="eyebrow eyebrow--light">Reservation</p><h1 class="page-h1">ご予約</h1></div>
+  </div>
+  <div class="section">
+    <p class="body-text js-reveal" style="margin-bottom:40px;">完全予約制のため、ご来店前にご予約をお願いしております。当日のご予約もお電話で承りますのでお気軽にご連絡ください。</p>
+    <div class="booking-layout">
+      <div class="hpb-card js-lift">
+        <div class="hpb-badge">Hot Pepper Beauty</div>
+        <h3 class="hpb-title">24時間いつでも<br>オンライン予約</h3>
+        <p class="hpb-desc">ホットペッパービューティーから24時間ご予約いただけます。クーポンも豊富にご用意しております。</p>
+        <a class="hpb-btn" href="https://beauty.hotpepper.jp/" target="_blank" rel="noopener">ホットペッパーで予約する →</a>
+        <p class="hpb-note">24時間受付　·　クーポンあり　·　口コミ掲載中</p>
+      </div>
+      <div class="contact-col">
+        <h3 class="contact-heading js-reveal-left">お電話でのご予約</h3>
+        <div class="contact-item js-reveal-left" style="--d:.1s"><div class="ci-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.86 19.86 0 0 1 3.09 4.18 2 2 0 0 1 5.07 2h3a2 2 0 0 1 2 1.72c.13 1 .37 1.97.72 2.9a2 2 0 0 1-.45 2.11L9.09 9.91a16 16 0 0 0 6 6l1.18-1.18a2 2 0 0 1 2.11-.45c.93.35 1.9.59 2.9.72A2 2 0 0 1 22 16.92z"/></svg></div><div><div class="ci-label">電話番号</div><div class="ci-value ci-value--lg">03-XXXX-XXXX</div></div></div>
+        <div class="contact-item js-reveal-left" style="--d:.2s"><div class="ci-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><div><div class="ci-label">受付時間</div><div class="ci-value">火〜土：10:00 〜 19:00<br>日・祝：10:00 〜 18:00<br>定休日：月曜日</div></div></div>
+        <div class="contact-item js-reveal-left" style="--d:.3s"><div class="ci-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C8.69 2 6 4.69 6 8c0 4.5 6 14 6 14s6-9.5 6-14c0-3.31-2.69-6-6-6z"/><circle cx="12" cy="8" r="2"/></svg></div><div><div class="ci-label">住所</div><div class="ci-value">〒150-0001 東京都渋谷区神宮前 3-14-8<br>グリーンテラスビル 2F</div></div></div>
+        <div class="contact-item js-reveal-left" style="--d:.4s"><div class="ci-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 17V7h4a3 3 0 0 1 0 6H9"/></svg></div><div><div class="ci-label">駐車場</div><div class="ci-value">無料駐車場3台完備<br>お車でのご来店も大歓迎です</div></div></div>
       </div>
     </div>
   </div>
+</div>
 
-  <footer>
-    <div class="footer-logo">Verdure Hair Salon</div>
-    <div>© 2025 Verdure. All rights reserved.</div>
-    <!-- ★ 住所を変更してください -->
-    <div>東京都○○区○○町 1-2-3</div>
-  </footer>
+<!-- モーダル -->
+<div class="gallery-modal" id="gallery-modal" onclick="closeModal()">
+  <div class="gallery-modal-inner" onclick="event.stopPropagation()">
+    <button class="gallery-modal-close" onclick="closeModal()">✕</button>
+    <div id="modal-content"></div>
+  </div>
+</div>
 
-  <script src="main.js"></script>
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo">Verdure Hair Salon</div>
+      <div class="footer-sub">地域に根ざした家族のヘアサロン</div>
+    </div>
+    <div class="footer-info">
+      〒150-0001 東京都渋谷区神宮前 3-14-8<br>
+      TEL: 03-XXXX-XXXX　／　営業：火〜土 10:00〜19:00
+    </div>
+  </div>
+  <div class="footer-copy">© 2025 Verdure Hair Salon. All rights reserved.</div>
+</footer>
+
+<script src="main.js"></script>
 </body>
 </html>
