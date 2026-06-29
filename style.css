@@ -36,6 +36,8 @@ ul, ol { list-style: none; }
 a { color: inherit; text-decoration: none; }
 button { font: inherit; background: none; border: none; cursor: pointer; color: inherit; }
 summary { cursor: pointer; }
+/* 長い英数字や連続文字でも必ず折り返してはみ出しを防ぐ */
+p, h1, h2, h3, dt, dd, li, summary { overflow-wrap: anywhere; word-break: break-word; }
 
 body {
   font-family: var(--font-body);
@@ -1028,6 +1030,18 @@ body {
 
   .hero__inner {
     padding-bottom: clamp(90px, 14vh, 120px);
+  }
+  /* iOSで画像が左半分になる不具合対策:
+     ズーム(transform)を止め、背景をbgとimgの両方に持たせる */
+  .hero__bg {
+    background-image: url("hero.png");
+    background-size: cover;
+    background-position: center 38%;
+    background-repeat: no-repeat;
+  }
+  .hero__img {
+    animation: none;
+    transform: none;
   }
   .hero__vertical {
     top: 84px;
