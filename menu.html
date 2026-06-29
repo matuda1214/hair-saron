@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>メニュー料金 | ASANAGI hair design</title>
+<meta name="description" content="カット・カラー・パーマ・トリートメントなどのメニューと料金一覧。">
+<meta property="og:title" content="メニュー料金 | ASANAGI hair design">
+<meta property="og:description" content="カット・カラー・パーマ・トリートメントなどのメニューと料金一覧。">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="subpage">
+
+<!-- ローディング演出 -->
+<div class="loader" id="loader" aria-hidden="true">
+  <p class="loader__logo">朝凪<span>ASANAGI hair design</span></p>
+</div>
+
+<!-- ヘッダー -->
+<header class="header" id="header">
+  <div class="header__inner">
+    <a href="index.html" class="header__logo">
+      <span class="header__logo-kanji">朝凪</span>
+      <span class="header__logo-text">ASANAGI hair design</span>
+    </a>
+    <nav class="gnav" id="gnav" aria-label="メインナビゲーション">
+      <ul class="gnav__list">
+        <li><a href="concept.html"><span class="en">Concept</span><span class="ja">コンセプト</span></a></li>
+        <li><a href="stylist.html"><span class="en">Stylist</span><span class="ja">スタイリスト</span></a></li>
+        <li><a href="works.html"><span class="en">Style</span><span class="ja">スタイル実績</span></a></li>
+        <li><a href="menu.html" aria-current="page"><span class="en">Menu</span><span class="ja">メニュー料金</span></a></li>
+        <li><a href="access.html"><span class="en">Access</span><span class="ja">アクセス</span></a></li>
+        <li class="gnav__reserve-sp"><a href="reserve.html"><span class="en">Reserve</span><span class="ja">ご予約</span></a></li>
+      </ul>
+      <div class="gnav__tel">
+        <p class="gnav__tel-number"><a href="tel:0775000000">077-500-0000</a></p>
+        <p class="gnav__tel-note">受付 9:00 - 18:00 / 火曜定休</p>
+      </div>
+    </nav>
+    <a href="reserve.html" class="header__reserve">ご予約</a>
+    <button class="header__menu-btn" id="menuBtn" aria-expanded="false" aria-controls="gnav" aria-label="メニューを開く">
+      <span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main class="subpage-main">
+
+<section class="page-hero">
+  <div class="page-hero__inner">
+    <p class="page-hero__en">Menu</p>
+    <h1 class="page-hero__title">メニュー料金</h1>
+      <p class="page-hero__lead">表示はすべて税込価格です。初回はカウンセリングのお時間を長めにいただくため、余裕をもってご来店ください。</p>
+  </div>
+</section>
+
+
+  <section class="section menu">
+    <div class="section__inner">
+      <div class="menu__grid">
+        <div class="menu__block reveal">
+          <h3 class="menu__cat">Cut <span>カット</span></h3>
+          <dl>
+            <div><dt>カット(シャンプー・ブロー込)</dt><dd>¥5,500</dd></div>
+            <div><dt>メンズカット</dt><dd>¥4,950</dd></div>
+            <div><dt>学生カット(高校生以下)</dt><dd>¥3,850</dd></div>
+            <div><dt>前髪カット</dt><dd>¥1,100</dd></div>
+          </dl>
+        </div>
+        <div class="menu__block reveal">
+          <h3 class="menu__cat">Color <span>カラー</span></h3>
+          <dl>
+            <div><dt>カット + ケアカラー</dt><dd>¥11,000</dd></div>
+            <div><dt>カラーのみ(リタッチ)</dt><dd>¥6,050</dd></div>
+            <div><dt>白髪ぼかしハイライト + カット</dt><dd>¥15,400</dd></div>
+            <div><dt>ダブルカラー + カット</dt><dd>¥17,600</dd></div>
+          </dl>
+        </div>
+        <div class="menu__block reveal">
+          <h3 class="menu__cat">Perm <span>パーマ</span></h3>
+          <dl>
+            <div><dt>カット + コスメパーマ</dt><dd>¥12,100</dd></div>
+            <div><dt>カット + デジタルパーマ</dt><dd>¥16,500</dd></div>
+            <div><dt>カット + 縮毛矯正</dt><dd>¥19,800</dd></div>
+          </dl>
+        </div>
+        <div class="menu__block reveal">
+          <h3 class="menu__cat">Care <span>トリートメント / スパ</span></h3>
+          <dl>
+            <div><dt>髪質改善トリートメント</dt><dd>¥6,600</dd></div>
+            <div><dt>サロントリートメント</dt><dd>¥3,300</dd></div>
+            <div><dt>ヘッドスパ(20分)</dt><dd>¥3,850</dd></div>
+            <div><dt>ヘッドスパ(40分)</dt><dd>¥6,050</dd></div>
+          </dl>
+        </div>
+      </div>
+      <p class="menu__note reveal">※髪の長さ・量による追加料金はありません。※その他のメニューはお気軽にご相談ください。</p>
+    </div>
+  </section>
+
+<nav class="pagenav" aria-label="他のページ">
+  <div class="pagenav__inner">
+    <p class="pagenav__head">ほかのページ</p>
+    <div class="pagenav__grid">
+    <a href="concept.html" class="pagenav__item"><span class="en">Concept</span><span class="ja">コンセプト</span></a>
+    <a href="stylist.html" class="pagenav__item"><span class="en">Stylist</span><span class="ja">スタイリスト</span></a>
+    <a href="works.html" class="pagenav__item"><span class="en">Style</span><span class="ja">スタイル実績</span></a>
+    <a href="access.html" class="pagenav__item"><span class="en">Access</span><span class="ja">アクセス</span></a>
+    </div>
+    <a href="reserve.html" class="pagenav__reserve">ご予約・お問い合わせはこちら</a>
+  </div>
+</nav>
+
+</main>
+
+<!-- フッター -->
+<footer class="footer">
+  <div class="footer__inner">
+    <p class="footer__logo">朝凪<span>ASANAGI hair design</span></p>
+    <p class="footer__address">〒840-0801 佐賀県佐賀市駅前中央0-0-0 ASANAGIビル 1F<br>TEL <a href="tel:0775000000">077-500-0000</a> / 9:00-19:00 / 火曜・第2水曜 定休</p>
+    <ul class="footer__nav">
+      <li><a href="concept.html">コンセプト</a></li>
+      <li><a href="stylist.html">スタイリスト</a></li>
+      <li><a href="works.html">スタイル実績</a></li>
+      <li><a href="menu.html">メニュー料金</a></li>
+      <li><a href="access.html">アクセス</a></li>
+      <li><a href="reserve.html">ご予約</a></li>
+    </ul>
+    <p class="footer__copy">&copy; 2026 ASANAGI hair design</p>
+  </div>
+</footer>
+
+<!-- 追従予約バー(モバイル) -->
+<div class="fixed-cta" id="fixedCta">
+  <a href="tel:0775000000" class="fixed-cta__tel">電話する</a>
+  <a href="https://beauty.hotpepper.jp/" target="_blank" rel="noopener" class="fixed-cta__hpb">WEB予約(ホットペッパー)</a>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

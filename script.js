@@ -115,21 +115,28 @@ document.addEventListener('DOMContentLoaded', () => {
      6. モバイル追従の予約バー
         ヒーローを通り過ぎたら表示し、
         ご予約セクションが見えている間は隠す
+        (ページにより要素が無い場合は安全に処理をスキップ)
   ---------------------------------------------------------- */
   const fixedCta = document.getElementById('fixedCta');
   const reserveSection = document.getElementById('reserve');
 
-  let reserveInView = false;
-  const reserveIo = new IntersectionObserver((entries) => {
-    reserveInView = entries[0].isIntersecting;
-  }, { threshold: 0.2 });
-  reserveIo.observe(reserveSection);
+  if (fixedCta) {
+    let reserveInView = false;
+    if (reserveSection) {
+      const reserveIo = new IntersectionObserver((entries) => {
+        reserveInView = entries[0].isIntersecting;
+      }, { threshold: 0.2 });
+      reserveIo.observe(reserveSection);
+    }
 
-  const onScrollCta = () => {
-    const passedHero = window.scrollY > window.innerHeight * 0.8;
-    fixedCta.classList.toggle('is-visible', passedHero && !reserveInView);
-  };
-  window.addEventListener('scroll', onScrollCta, { passive: true });
-  onScrollCta();
+    // ヒーローがあるトップは通過後に表示、下層ページは常に表示
+    const hero = document.querySelector('.hero');
+    const onScrollCta = () => {
+      const passedHero = hero ? window.scrollY > window.innerHeight * 0.8 : true;
+      fixedCta.classList.toggle('is-visible', passedHero && !reserveInView);
+    };
+    window.addEventListener('scroll', onScrollCta, { passive: true });
+    onScrollCta();
+  }
 
 });

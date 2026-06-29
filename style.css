@@ -970,6 +970,217 @@ body {
 .fixed-cta__hpb { background: var(--gold); color: #2b2310; flex: 1.6; }
 
 /* ============================================================
+   トップ:お店の一言紹介
+   ============================================================ */
+.intro { background: var(--base); text-align: center; }
+.intro__inner { display: flex; flex-direction: column; align-items: center; }
+.intro__en {
+  font-family: var(--font-en);
+  font-size: 14px;
+  letter-spacing: 0.32em;
+  color: var(--gold);
+  margin-bottom: 20px;
+}
+.intro__lead {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(22px, 3.4vw, 32px);
+  letter-spacing: 0.1em;
+  line-height: 1.9;
+  margin-bottom: 28px;
+}
+.intro__text {
+  max-width: 640px;
+  font-size: 15px;
+  line-height: 2.1;
+  margin-bottom: 32px;
+}
+.intro__more {
+  font-family: var(--font-en);
+  font-size: 14px;
+  letter-spacing: 0.14em;
+  color: var(--teal);
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 3px;
+  transition: color 0.3s;
+}
+.intro__more:hover { color: var(--gold); }
+
+/* ============================================================
+   トップ:各ページへの案内カード
+   ============================================================ */
+.guide { background: var(--mist); }
+.guide__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(16px, 2.4vw, 26px);
+}
+.guide__card {
+  position: relative;
+  display: block;
+  background: var(--white);
+  border-radius: 6px;
+  padding: clamp(28px, 3vw, 40px);
+  padding-right: 52px;
+  overflow: hidden;
+  transition: transform 0.45s var(--ease), box-shadow 0.45s, opacity 1s var(--ease);
+}
+.guide__card::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 3px;
+  background: var(--gold);
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.45s var(--ease);
+}
+.guide__card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 44px rgba(36, 64, 61, 0.12);
+}
+.guide__card:hover::before { transform: scaleY(1); }
+.guide__en {
+  font-family: var(--font-en);
+  font-size: 14px;
+  letter-spacing: 0.26em;
+  color: var(--gold);
+}
+.guide__ja {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 21px;
+  letter-spacing: 0.08em;
+  margin: 4px 0 12px;
+}
+.guide__text { font-size: 13px; line-height: 1.9; color: rgba(34, 49, 47, 0.78); }
+.guide__arrow {
+  position: absolute;
+  right: 24px; bottom: 24px;
+  font-size: 18px;
+  color: var(--teal);
+  transition: transform 0.4s var(--ease);
+}
+.guide__card:hover .guide__arrow { transform: translateX(5px); }
+
+/* ============================================================
+   下層ページ:ページヘッダー(帯)
+   ============================================================ */
+.subpage .header { background: rgba(247, 248, 246, 0.92); backdrop-filter: blur(10px); box-shadow: 0 1px 0 rgba(34, 49, 47, 0.08); }
+.subpage .header__logo,
+.subpage .gnav__list a { color: var(--ink); }
+.subpage .header__reserve { color: var(--ink); }
+.subpage .header__menu-btn span { background: var(--ink); }
+
+.subpage-main { padding-top: var(--header-h); }
+
+.page-hero {
+  position: relative;
+  padding: clamp(56px, 9vw, 96px) 0 clamp(40px, 6vw, 64px);
+  background: linear-gradient(160deg, #213a37, var(--deep) 60%, #2e524e);
+  color: var(--base);
+  overflow: hidden;
+}
+.page-hero::after {
+  content: "";
+  position: absolute;
+  left: -10%; bottom: -40%;
+  width: 120%; height: 80%;
+  border-radius: 46% 54% 0 0 / 100% 100% 0 0;
+  background: radial-gradient(circle at 50% 0, rgba(185,154,85,0.12), transparent 60%);
+}
+.page-hero__inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+.page-hero__en {
+  font-family: var(--font-en);
+  font-size: 15px;
+  letter-spacing: 0.32em;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+.page-hero__title {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(28px, 4.4vw, 42px);
+  letter-spacing: 0.14em;
+}
+.page-hero__lead {
+  max-width: 640px;
+  margin-top: 20px;
+  font-size: 14.5px;
+  line-height: 2;
+  color: rgba(247, 248, 246, 0.85);
+}
+
+/* ============================================================
+   下層ページ:ページ間ナビ(下部)
+   ============================================================ */
+.pagenav { background: var(--deep); color: var(--base); padding: clamp(56px, 8vw, 88px) 0; }
+.pagenav__inner { max-width: 1080px; margin: 0 auto; padding: 0 28px; }
+.pagenav__head {
+  font-family: var(--font-en);
+  font-size: 14px;
+  letter-spacing: 0.3em;
+  color: var(--gold);
+  text-align: center;
+  margin-bottom: 28px;
+}
+.pagenav__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 32px;
+}
+.pagenav__item {
+  text-align: center;
+  padding: 22px 12px;
+  border: 1px solid rgba(247, 248, 246, 0.18);
+  border-radius: 6px;
+  transition: background 0.35s, border-color 0.35s, transform 0.35s var(--ease);
+}
+.pagenav__item:hover {
+  background: rgba(247, 248, 246, 0.06);
+  border-color: var(--gold);
+  transform: translateY(-3px);
+}
+.pagenav__item .en {
+  display: block;
+  font-family: var(--font-en);
+  font-size: 16px;
+  letter-spacing: 0.16em;
+  color: var(--gold);
+}
+.pagenav__item .ja {
+  display: block;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  margin-top: 4px;
+  opacity: 0.85;
+}
+.pagenav__reserve {
+  display: block;
+  max-width: 420px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 16px;
+  background: var(--gold);
+  color: #2b2310;
+  border-radius: 999px;
+  font-size: 14px;
+  letter-spacing: 0.12em;
+  transition: transform 0.4s var(--ease), background 0.3s;
+}
+.pagenav__reserve:hover { transform: translateY(-3px); background: #c9aa64; }
+
+/* 予約ページは下部ナビなしなので余白を足す */
+.reserve--page { padding-bottom: clamp(80px, 12vw, 130px); }
+
+/* ============================================================
    レスポンシブ
    ============================================================ */
 @media (max-width: 960px) {
@@ -979,6 +1190,8 @@ body {
   .stylist__card { grid-template-columns: 1fr; }
   .stylist__photo { max-width: 380px; }
   .works__grid { grid-template-columns: repeat(2, 1fr); }
+  .guide__grid { grid-template-columns: repeat(2, 1fr); }
+  .pagenav__grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 768px) {
@@ -1058,6 +1271,7 @@ body {
   .works__desc { display: none; }
 
   .menu__grid { grid-template-columns: 1fr; }
+  .guide__grid { grid-template-columns: 1fr; }
 
   .reserve__card { padding-right: 28px; }
   .reserve__arrow { display: none; }

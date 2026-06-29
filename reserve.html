@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ご予約 | ASANAGI hair design</title>
+<meta name="description" content="ご予約はホットペッパービューティーまたはお電話で。佐賀市の美容室 ASANAGI hair design。">
+<meta property="og:title" content="ご予約 | ASANAGI hair design">
+<meta property="og:description" content="ご予約はホットペッパービューティーまたはお電話で。佐賀市の美容室 ASANAGI hair design。">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="subpage">
+
+<!-- ローディング演出 -->
+<div class="loader" id="loader" aria-hidden="true">
+  <p class="loader__logo">朝凪<span>ASANAGI hair design</span></p>
+</div>
+
+<!-- ヘッダー -->
+<header class="header" id="header">
+  <div class="header__inner">
+    <a href="index.html" class="header__logo">
+      <span class="header__logo-kanji">朝凪</span>
+      <span class="header__logo-text">ASANAGI hair design</span>
+    </a>
+    <nav class="gnav" id="gnav" aria-label="メインナビゲーション">
+      <ul class="gnav__list">
+        <li><a href="concept.html"><span class="en">Concept</span><span class="ja">コンセプト</span></a></li>
+        <li><a href="stylist.html"><span class="en">Stylist</span><span class="ja">スタイリスト</span></a></li>
+        <li><a href="works.html"><span class="en">Style</span><span class="ja">スタイル実績</span></a></li>
+        <li><a href="menu.html"><span class="en">Menu</span><span class="ja">メニュー料金</span></a></li>
+        <li><a href="access.html"><span class="en">Access</span><span class="ja">アクセス</span></a></li>
+        <li class="gnav__reserve-sp"><a href="reserve.html" aria-current="page"><span class="en">Reserve</span><span class="ja">ご予約</span></a></li>
+      </ul>
+      <div class="gnav__tel">
+        <p class="gnav__tel-number"><a href="tel:0775000000">077-500-0000</a></p>
+        <p class="gnav__tel-note">受付 9:00 - 18:00 / 火曜定休</p>
+      </div>
+    </nav>
+    <a href="reserve.html" class="header__reserve">ご予約</a>
+    <button class="header__menu-btn" id="menuBtn" aria-expanded="false" aria-controls="gnav" aria-label="メニューを開く">
+      <span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main class="subpage-main">
+
+<section class="page-hero">
+  <div class="page-hero__inner">
+    <p class="page-hero__en">Reservation</p>
+    <h1 class="page-hero__title">ご予約</h1>
+      <p class="page-hero__lead">完全予約制です。ホットペッパービューティーまたはお電話よりご予約ください。</p>
+  </div>
+</section>
+
+
+  <section class="section reserve reserve--page">
+    <div class="section__inner">
+      <div class="reserve__grid">
+        <a href="https://beauty.hotpepper.jp/" target="_blank" rel="noopener" class="reserve__card reserve__card--hpb reveal">
+          <p class="reserve__label">24時間受付 / 空き状況がすぐわかる</p>
+          <p class="reserve__main">ホットペッパービューティー<br>で予約する</p>
+          <p class="reserve__sub">クーポン・口コミも掲載中。ネット予約が便利です。</p>
+          <span class="reserve__arrow" aria-hidden="true">→</span>
+        </a>
+        <a href="tel:0775000000" class="reserve__card reserve__card--tel reveal">
+          <p class="reserve__label">お急ぎの方・ご相談はお電話で</p>
+          <p class="reserve__main reserve__main--tel">077-500-0000</p>
+          <p class="reserve__sub">受付時間 9:00 - 18:00(火曜定休)<br>施術中は折り返しのご連絡となる場合があります。</p>
+          <span class="reserve__arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+      <p class="reserve__note reveal">※当日のご予約はお電話のほうがスムーズです。※キャンセル・変更は前日までにご連絡ください。</p>
+    </div>
+  </section>
+</main>
+
+<!-- フッター -->
+<footer class="footer">
+  <div class="footer__inner">
+    <p class="footer__logo">朝凪<span>ASANAGI hair design</span></p>
+    <p class="footer__address">〒840-0801 佐賀県佐賀市駅前中央0-0-0 ASANAGIビル 1F<br>TEL <a href="tel:0775000000">077-500-0000</a> / 9:00-19:00 / 火曜・第2水曜 定休</p>
+    <ul class="footer__nav">
+      <li><a href="concept.html">コンセプト</a></li>
+      <li><a href="stylist.html">スタイリスト</a></li>
+      <li><a href="works.html">スタイル実績</a></li>
+      <li><a href="menu.html">メニュー料金</a></li>
+      <li><a href="access.html">アクセス</a></li>
+      <li><a href="reserve.html">ご予約</a></li>
+    </ul>
+    <p class="footer__copy">&copy; 2026 ASANAGI hair design</p>
+  </div>
+</footer>
+
+<!-- 追従予約バー(モバイル) -->
+<div class="fixed-cta" id="fixedCta">
+  <a href="tel:0775000000" class="fixed-cta__tel">電話する</a>
+  <a href="https://beauty.hotpepper.jp/" target="_blank" rel="noopener" class="fixed-cta__hpb">WEB予約(ホットペッパー)</a>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
