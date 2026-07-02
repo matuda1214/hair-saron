@@ -122,6 +122,8 @@ body {
   box-shadow: 0 1px 0 rgba(34, 49, 47, 0.08);
 }
 .header__inner {
+  position: relative; /* すりガラスの下敷き(::before)より手前に描画する */
+  z-index: 1;
   max-width: 1200px;
   height: 100%;
   margin: 0 auto;
