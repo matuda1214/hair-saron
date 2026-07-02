@@ -8,6 +8,12 @@
 <meta property="og:title" content="アクセス | ASANAGI hair design">
 <meta property="og:description" content="佐賀市の美容室 ASANAGI hair design の店舗情報・地図・よくあるご質問。">
 <meta property="og:type" content="website">
+<!-- 公開後、content を実際のURL(例 https://ユーザー名.github.io/リポジトリ名/ogp.png)に変えるとSNS共有時に確実に画像が出ます -->
+<meta property="og:image" content="ogp.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="ogp.png">
+<link rel="icon" type="image/png" sizes="64x64" href="favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
@@ -61,11 +67,16 @@
   <section class="section access">
     <div class="section__inner">
       <div class="access__grid">
-        <div class="access__map reveal">
-          <iframe
-            src="https://www.google.com/maps?q=%E4%BD%90%E8%B3%80%E7%9C%8C%E4%BD%90%E8%B3%80%E5%B8%82%E9%A7%85%E5%89%8D%E4%B8%AD%E5%A4%AE&output=embed&z=16"
-            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade" title="ASANAGI hair design の地図"></iframe>
+        <div class="access__mapwrap reveal">
+          <div class="access__map">
+            <iframe
+              src="https://www.google.com/maps?q=%E4%BD%90%E8%B3%80%E7%9C%8C%E4%BD%90%E8%B3%80%E5%B8%82%E9%A7%85%E5%89%8D%E4%B8%AD%E5%A4%AE&output=embed&z=16"
+              width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade" title="ASANAGI hair design の地図"></iframe>
+          </div>
+          <a class="access__route" href="https://www.google.com/maps/dir/?api=1&destination=%E4%BD%90%E8%B3%80%E7%9C%8C%E4%BD%90%E8%B3%80%E5%B8%82%E9%A7%85%E5%89%8D%E4%B8%AD%E5%A4%AE" target="_blank" rel="noopener">
+            Googleマップで経路を見る →
+          </a>
         </div>
         <dl class="access__info reveal">
           <div><dt>店名</dt><dd>ASANAGI hair design(アサナギ ヘアデザイン)</dd></div>
