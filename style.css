@@ -101,11 +101,24 @@ body {
   top: 0; left: 0; right: 0;
   z-index: 50;
   height: var(--header-h);
-  transition: background 0.4s, box-shadow 0.4s;
+  transition: box-shadow 0.4s;
 }
-.header.is-scrolled {
+/* すりガラス背景は疑似要素に持たせる。
+   ヘッダー本体に backdrop-filter を付けると、iOSでは
+   中の全画面メニューがヘッダー内に閉じ込められるため。 */
+.header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
   background: rgba(247, 248, 246, 0.92);
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
+  opacity: 0;
+  transition: opacity 0.4s;
+  pointer-events: none;
+}
+.header.is-scrolled::before { opacity: 1; }
+.header.is-scrolled {
   box-shadow: 0 1px 0 rgba(34, 49, 47, 0.08);
 }
 .header__inner {
@@ -1080,7 +1093,8 @@ body {
 /* ============================================================
    下層ページ:ページヘッダー(帯)
    ============================================================ */
-.subpage .header { background: rgba(247, 248, 246, 0.92); backdrop-filter: blur(10px); box-shadow: 0 1px 0 rgba(34, 49, 47, 0.08); }
+.subpage .header::before { opacity: 1; }
+.subpage .header { box-shadow: 0 1px 0 rgba(34, 49, 47, 0.08); }
 .subpage .header__logo,
 .subpage .gnav__list a { color: var(--ink); }
 .subpage .header__reserve { color: var(--ink); }
